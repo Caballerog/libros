@@ -1,0 +1,9 @@
+Se piden cinco números al usuario y se mostrará el promedio de la operación.
+  VARIABLES: NUM1, NUM2, NUM3, NUM4, NUM5, RESULTADO son números reales.
+  CONSTANTES: no se utiliza ninguna
+  Inicio
+    Escribir "Introduzca cinco números reales"
+    Leer NUM1, NUM2, NUM3, NUM4, NUM5
+    Calcular RESULTADO = (NUM1+NUM2+NUM3+NUM4+NUM5)/5
+    Escribir "El promedio es " RESULTADO
+  Fin

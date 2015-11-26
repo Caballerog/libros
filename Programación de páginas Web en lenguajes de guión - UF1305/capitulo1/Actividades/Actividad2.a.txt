@@ -3,7 +3,7 @@ mostrará el resultado de la suma, resta, multiplicación y división
   VARIABLES: NUM1, NUM2, SUMA, RESTA, MULTIPLICACIÓN, DIVISIÓN son números reales.
   CONSTANTES: no se utiliza ninguna
   Inicio
-    Escribir “Introduzca dos números reales”
+    Escribir “Introduzca dos números reales: ”
     Leer NUM1, NUM2
     Calcular SUMA = NUM1 + NUM2
     Calcular RESTA = NUM1 - NUM2
