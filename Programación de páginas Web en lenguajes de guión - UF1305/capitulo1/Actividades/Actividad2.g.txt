@@ -1,0 +1,15 @@
+Se solicitará a un usuario un número entero correspondiente al número de artículos vendidos,
+posteriormente se solicitará el precio de cada unidad del producto.
+El sistema calculará el coste total de la operación teniendo en cuenta que al precio
+calculado se le debe aumentar el 21% correspondiente al IVA.
+  VARIABLES: PRECIO, RESULTADO son números enteros,
+            ARTICULOS es un número real.
+  CONSTANTES: IVA = 1.21
+  Inicio
+    Escribir "Introduzca el número de artículos vendidos"
+    Leer ARTICULOS
+    Escribir "Introduzca el precio de cad artículo"
+    Leer PRECIO
+    Calcular RESULTADO = (PRECIO * ARTICULOS) * IVA
+    Escribir "El coste total es " RESULTADO 
+  Fin

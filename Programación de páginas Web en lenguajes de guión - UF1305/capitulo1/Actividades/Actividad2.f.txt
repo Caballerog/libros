@@ -1,0 +1,47 @@
+Se solicitarán cuatro números enteros al usuario y la aplicación debe devolver
+los números ordenados de menor a mayor.
+
+  VARIABLES: A, B, C, D, INFERIOR1, INFERIOR2, SUPERIOR1, SUPERIOR2, MENOR,
+            MEDIANO1, MEDIANO2, MAYOR son números enteros.
+  CONSTANTES: no se utiliza ninguna
+  Inicio
+    Escribir "Introduzca cuatro números en orden aleatorio"
+    Leer A, B, C, D
+    Si A < B
+      INFERIOR1 = A
+      SUPERIOR1 = B
+    Sino
+      INFERIOR1 = B
+      SUPERIOR1 = A
+    Fin Si
+
+    Si C < D
+      INFERIOR2 = C
+      SUPERIOR2 = D
+    Sino
+      INFERIOR2 = D
+      SUPERIOR2 = C
+    Fin Si
+
+    Si INFERIOR1 < INFERIOR2
+      MENOR = INFERIOR1
+      MEDIANO1 = INFERIOR2
+    Sino
+      MENOR = INFERIOR2
+      MEDIANO1 = INFERIOR1
+    Fin Si
+
+    Si SUPERIOR1 > SUPERIOR2
+      MAYOR = SUPERIOR1
+      MEDIANO2 = SUPERIOR2
+    Sino
+      MAYOR = SUPERIOR2
+      MEDIANO2 = SUPERIOR1
+    Fin Si
+
+    Si MEDIANO1 < MEDIANO2
+      Escribir MENOR MEDIANO1 MEDIANO2 MAYOR
+    Sino
+      Escribir MENOR MEDIANO2 MEDIANO1 MAYOR
+    Fin Si
+  Fin

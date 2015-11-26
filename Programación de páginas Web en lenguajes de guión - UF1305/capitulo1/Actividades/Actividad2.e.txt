@@ -1,0 +1,21 @@
+Se pide al usuario tres números. Los dos primeros corresponden al límite inferior
+y límite superior de un rango. Utilizando el tercer número se debe comprobar si
+éste se encuentra entre el límite inferior y superior. En caso de que se
+encuentre en el rango se mostrará un mensaje "El número está en el rango" en caso
+contrario se mostrará el mensaje "El número no está en el rango".
+
+  VARIABLES: LIMITE_INFERIOR, LIMITE_SUPERIOR, NUMERO son números enteros.
+  CONSTANTES: no se utiliza ninguna
+  Inicio
+      Escribir "Introduzca el límite inferior"
+      Leer LIMITE_INFERIOR
+      Escribir "Introduzca el límite superior"
+      Leer LIMITE_SUPERIOR
+      Escribir "Introduzca el número a comprobar"
+      Leer NUMERO
+      Si LIMITE_INFERIOR <= NUMERO y NUMERO <= LIMITE_SUPERIOR
+        Escribir "El número está en el rango"
+      Sino
+        Escribir "El número no está en el rango"
+      Fin Si
+  Fin
