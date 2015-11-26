@@ -1,0 +1,18 @@
+Calcular y mostrar la suma de los cinco primeros números entre 1 y 1000 que sean divisibles por otro número dato
+  VARIABLES: SUMA=0, DIVISOR, NUMERO  son números reales.
+            CONTADOR=0 es un número entero
+  CONSTANTES: MAXIMO_NUMERO=1000, PRIMEROS=5;
+  Inicio
+    Escribir “Introduzca el número entre el que debe ser divisor”
+    Leer DIVISOR
+    Para NUMERO desde 1 hasta MAXIMO_NUMERO hacer
+      Si DIVISOR divide a NUMERO
+        SUMA = SUMA + NUMERO;
+        CONTADOR = CONTADOR + 1;
+      Fin Si
+      Si CONTADOR == PRIMEROS
+        Interrumpir
+      Fin Si.
+    Fin Para
+    Escribir “La suma de los números es “SUMA;
+  Fin

@@ -1,0 +1,8 @@
+public class Coche{
+   String marca;
+   float kilometros;
+   String color;
+   void encender(){...}
+   void acelerar(){...}
+   void apagar(){...}
+}

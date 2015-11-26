@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Ejemplo de lenguaje Script</title>
+    </head>
+    <body>
+        Cálculo del factorial de 10
+        <div id="resultado"></div>
+    </body>
+    <script>
+        function factorial(n) {
+            if (n === 0) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+        document.getElementById('resultado').innerHTML = factorial(10);
+    </script>
+</html>
