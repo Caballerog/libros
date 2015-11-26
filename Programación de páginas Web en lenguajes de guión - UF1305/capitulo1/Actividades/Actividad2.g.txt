@@ -8,8 +8,8 @@ calculado se le debe aumentar el 21% correspondiente al IVA.
   Inicio
     Escribir "Introduzca el número de artículos vendidos"
     Leer ARTICULOS
-    Escribir "Introduzca el precio de cad artículo"
+    Escribir "Introduzca el precio de cada artículo"
     Leer PRECIO
     Calcular RESULTADO = (PRECIO * ARTICULOS) * IVA
-    Escribir "El coste total es " RESULTADO 
+    Escribir "El coste total es " RESULTADO
   Fin
