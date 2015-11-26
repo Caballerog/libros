@@ -1,0 +1,32 @@
+Modifique el software anterior de modo que se muestre al usuario un menú con
+opciones para seleccionar la operación a realizar (suma, resta, multiplicación
+o división). En función de la opción seleccionada se calculará y mostrará al
+usuario el resultado de la operación.
+  VARIABLES: NUM1, NUM2, RESULTADO son números reales,
+             OPCION = -1 es un número entero.
+  CONSTANTES: no se utiliza ninguna
+  Inicio
+    Mientras OPCION es diferente a [0-4]
+      Escribir "Seleccione una de las siguientes opciones"
+      Escribir "1. SUMA"
+      Escribir "2. RESTAR"
+      Escribir "3. MULTIPLICAR"
+      Escribir "4. DIVIDIR"
+      Escribir "0. SALIR"
+      Leer OPCION
+    Fin Mientras
+    SI OPCION != 0
+      Escribir “Introduzca dos números reales”
+      Leer NUM1, NUM2
+      Si OPCION == 1
+        Calcular RESULTADO = NUM1 + NUM2
+      Sino Si OPCION == 2
+        Calcular RESULTADO = NUM1 - NUM2
+      Sino Si OPCION == 3
+        Calcular RESULTADO = NUM1 * NUM2
+      Sino
+        Calcular RESULTADO = NUM1 / NUM2
+      Fin Si
+      Escribir "El resultado de su operación es " RESULTADO
+    Fin Si
+  Fin
