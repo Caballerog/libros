@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Ejemplo 4.2</title>
+    </head>
+
+    <body>
+        <header>
+            Ejemplo 4.2
+        </header>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    <script type="text/javascript">
+        function getNombreMes(mo) {
+            mo = mo - 1; // Ajusta el indice del arreglo para el arreglo de meses (1=Jan, 12=Dec)
+            var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            if (meses[mo] != null) {
+                return meses[mo];
+            } else {
+                throw "MesInvalido"; //Arroja la palabra "MesInvalido" al ocurrir una excepción
+            }
+        }
+        try {
+            var nombreMes = getNombreMes(4);
+        } catch (e) {
+            nombreMes = "unknown";
+            console.log(nombreMes);
+        }
+    </script>
+
+</html>
