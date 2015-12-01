@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Ejemplo del objeto document</title>
+    </head>
+
+    <body>
+        <div id="contenido">
+            <p>Esta es mi página Web, la cual es totalmente configurada a partir de las indicaciones de un usuario.</p>
+            <p>Se ha modificado el título de la página, el color de fondo e incluso el color de la tipografía.</p>
+            <script>
+                document.open();
+                document.write('Se ha creado este texto a partir del flujo de escritura');
+                document.close();
+            </script>
+            <input type="button" onclick="modificaDOM()" value="¡Modifica el DOM!"/>
+        </div>
+        <script>
+            document.title = prompt('¿Qué título desea que tenga la página ? ');
+            document.body.style.backgroundColor = prompt('Escriba el nombre de un color para que sea el color de fondo', 'red');
+            document.body.style.color = prompt('Escriba el nombre de un color para que sea el color de la fuente', "blue");
+            var pagina = 1;
+
+            function eliminarPagina(nodo) {
+                while (nodo.firstChild != null) {
+                    nodo.removeChild(nodo.firstChild);
+                }
+            }
+
+            function agregarBoton(nodo) {
+                boton = document.createElement("input");
+                var att = document.createAttribute("type");
+                att.value = "button";
+                boton.setAttributeNode(att);
+                att = document.createAttribute("value");
+                att.value = "¡Cambia el DOM!"
+                    boton.setAttributeNode(att);
+                att = document.createAttribute("onclick");
+                att.value = "modificaDOM()";
+                boton.setAttributeNode(att);
+                nodo.appendChild(boton)
+            }
+
+            function pintarPagina(nodo, pagina) {
+                if (pagina == 1) {
+                    nodo.appendChild(document.createTextNode("Esta es la segunda página"));
+                    var ol = document.createElement("ol");
+                    nodo.appendChild(ol);
+                    var li = document.createElement("li");
+                    ol.appendChild(li);
+                    li.appendChild(document.createTextNode("Elemento de lista ordenada"));
+                    li = document.createElement("li");
+                    ol.appendChild(li);
+                    li.appendChild(document.createTextNode("Elemento de lista ordenada"));
+                    li = document.createElement("li");
+                    ol.appendChild(li);
+                    li.appendChild(document.createTextNode("Otro elemento"));
+                    agregarBoton(nodo);
+                } else {
+                    nodo.appendChild(document.createTextNode("Esta es la primera página"));
+                    agregarBoton(nodo);
+                }
+            }
+
+            function modificaDOM() {
+                var nodo = document.getElementById("contenido");
+                eliminarPagina(nodo);
+                pintarPagina(nodo, pagina);
+                pagina = !pagina;
+            }
+        </script>
+    </body>
+
+</html>

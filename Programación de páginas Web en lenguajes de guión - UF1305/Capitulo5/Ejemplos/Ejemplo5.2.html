@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Segundo 0</title>
+    </head>
+
+    <body>
+        <button type="button" onclick="cambiarColor()">¡Cambiar color!</button>
+    </body>
+    <script>
+        var i = 1,
+            titulooriginal = document.title;
+        document.body.style.backgroundColor = "yellow";
+
+        function cambiarTitulo() {
+            document.title = titulooriginal.slice(0, -1) + i;
+            i++;
+            setTimeout('cambiarTitulo()', 1000);
+        }
+        cambiarTitulo();
+
+        function cambiarColor() {
+            document.body.style.backgroundColor = "red";
+        }
+    </script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Ejemplo de History</title>
+    </head>
+
+    <body>
+        <script>
+            function move(x) {
+                history.go(x);
+            }
+        </script>
+        <form>
+            <input type="button" value="back" onclick="move(-1)">
+            <input type="button" value="forward" onclick="move(1)">
+            <br>
+            <input type="button" value="back 2" onclick="move(-2)">
+            <input type="button" value="forward 2" onclick="move(2)">
+        </form>
+        <a href="javascript:history.back();">Ir atrás</a>
+        <br>
+        <a href="javascript:history.forward();">Ir adelante</a>
+    </body>
+
+</html>

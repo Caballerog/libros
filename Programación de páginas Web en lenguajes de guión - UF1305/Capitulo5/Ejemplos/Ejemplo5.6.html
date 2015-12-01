@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Utilizando getElementsByTagName </title>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="uno.html">El primer enlace</a></li>
+            <li><a href="dos.html">El segundo enlace</a></li>
+            <li><a href="tres.html">El tercer enlace</a></li>
+        </ul>
+
+        <script>
+            var nodos = document.getElementsByTagName("a")
+            for (var i = 0; i < nodos.length; ++i) {
+                nodos[i].texto = nodos[i].innerHTML;
+                nodos[i].onmouseover = function() {
+                    this.innerHTML = 'Cursor encima';
+                }
+                nodos[i].onmouseout = function() {
+                    this.innerHTML = this.texto;
+                }
+            }
+        </script>
+    </body>
+
+</html>

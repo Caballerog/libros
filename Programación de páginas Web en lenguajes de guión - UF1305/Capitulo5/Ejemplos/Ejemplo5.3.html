@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de enlaces de las imágenes</title>
+    </head>
+
+    <body>
+        <img src="img/imagen1.jpg"/>
+        <img src="img/imagen2.jpg"/>
+        <img src="img/imagen3.jpg"/>
+        <script>
+            var x = document.images,
+                txt = "",
+                i;
+            for (i = 0; i < x.length; i++) {
+                txt = txt + x[i].src + " <br> ";
+            }
+            document.write(txt);
+        </script>
+    </body>
+
+</html>

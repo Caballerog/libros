@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Modificando nodos con el árbol DOM</title>
+    </head>
+
+    <body>
+        <div id="contenido">
+            Este es el contenido de nuestra Web
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ul>
+            <table border="1">
+                <tr>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            function modificaDOM() {
+                var nodo = document.getElementById("contenido");
+                while (nodo.firstChild != null)
+                    nodo.removeChild(nodo.firstChild);
+                var texto = document.createTextNode("Creamos un nodo Texto")
+                nodo.appendChild(texto);
+                var ol = document.createElement("ol");
+                nodo.appendChild(ol);
+                var li = document.createElement("li");
+                ol.appendChild(li);
+                texto = document.createTextNode("Elemento de lista ordenada");
+                li.appendChild(texto);
+                li = document.createElement("li");
+                ol.appendChild(li);
+                texto = document.createTextNode("Elemento de lista ordenada");
+                li.appendChild(texto);
+                li = document.createElement("li");
+                ol.appendChild(li);
+                texto = document.createTextNode("Otro elemento");
+                li.appendChild(texto);
+            }
+            setTimeout("modificaDOM()", 2000);
+        </script>
+    </body>
+
+</html>

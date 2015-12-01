@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <a name="enlace1">Enlace 1</a>
+        <br>
+        <a name="enlace2">Enlace 2</a>
+        <br>
+        <button onclick="gira()">Gira</button>
+        <script>
+            function gira() {
+                var x = document.anchors[0].innerHTML;
+                var y = document.anchors[1].innerHTML;
+                document.anchors[0].innerHTML = y;
+                document.anchors[1].innerHTML = x;
+            }
+        </script>
+    </body>
+
+</html>

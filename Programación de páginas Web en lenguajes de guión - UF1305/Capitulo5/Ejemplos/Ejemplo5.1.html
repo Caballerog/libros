@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+
+    <head>
+        <title>Navegando por el BOM</title>
+        <script type="text/javascript">
+            function cambia() {
+                window.document.images[0].style.border = 'solid blue 10 px';
+                document.images[1].src = './img/ejemplo1_1.jpg';
+                document.images[0].src = './img/ejemplo1_2.jpg';
+                document.links[0].style.color = 'blue';
+            }
+        </script>
+    </head>
+
+    <body>
+        <div style="color:red; margin:20px;" onclick="cambia()"><a href="#"> ¡Cambiar! </a></div>
+        <img src="./img/ejemplo1_1.jpg" width="400"/>
+        <img src="./img/ejemplo1_2.jpg" width="400"/>
+    </body>
+
+</html>
