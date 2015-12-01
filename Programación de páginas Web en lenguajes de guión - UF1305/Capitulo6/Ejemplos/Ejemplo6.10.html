@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo 6.10.</title>
+    </head>
+
+    <body>
+        <div id="elemento1">Evento click</div>
+        <script>
+            function manejador1() {
+                console.log("Este es el manejador 1");
+            }
+
+            function manejador2() {
+                console.log("Este es el manejador 2");
+            }
+            var e = document.getElementById("elemento1");
+            e.addEventListener("click", manejador1, false);
+            e.addEventListener("click", manejador2, false);
+        </script>
+
+
+
+    </body>
+
+</html>

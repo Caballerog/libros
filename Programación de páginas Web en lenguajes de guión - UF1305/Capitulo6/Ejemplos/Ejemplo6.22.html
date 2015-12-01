@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onReset </title>
+    </head>
+
+    <body>
+        <p>Cuando el formulario es reiniciado se ejecuta el manejador de eventos onreset.</p>
+        <form id="form">Introduzca información:
+            <input type="text">
+            <input type="reset">
+        </form>
+
+        <script>
+            var x = document.getElementById('form');
+            x.addEventListener('reset', reset, false);
+
+            function reset() {
+                alert("El formulario fue reiniciado");
+            }
+        </script>
+    </body>
+
+</html>

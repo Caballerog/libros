@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Ejemplo 6.17.</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="elemento1"></div>
+        <p>Mueve el ratón sobre el rectángulo, y podrás ver como aparecen las coordenadas del puntero del ratón</p>
+        <p>En el momento que el ratón se mueve fuera del div, se invoca al evento mouseout el cual lo único que hace es borrar el contenido del elemento resultado.</p>
+        <p id="resultado"></p>
+        <script>
+            var e = document.getElementById('elemento1');
+            var r = document.getElementById('resultado');
+            e.addEventListener('mousemove', mousemove, false);
+            e.addEventListener('mouseout', mouseout, false);
+
+            function mousemove(event) {
+                var x = event.clientX;
+                var y = event.clientY;
+                r.innerHTML = "Coordenadas: (" + x + "," + y + ")";
+            }
+
+            function mouseout() {
+                r.innerHTML = "";
+            }
+        </script>
+    </body>
+
+</html>

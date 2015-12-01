@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo 6.5.</title>
+    </head>
+
+    <body>
+        <script>
+            function cambiaEstilo(elemento) {
+                switch (elemento.style.borderColor) {
+                    case 'blue':
+                    case 'blue blue blue blue':
+                        elemento.style.borderColor = 'lack';
+                        break;
+                    case 'black':
+                    case 'black black black black':
+                    case '#000000':
+                        elemento.style.borderColor = 'blue';
+                        break;
+                }
+            }
+        </script>
+        <div style="padding: .2em; width: 250px; height: 50px; border: thin solid blue" onmouseover="cambiaEstilo(this)" onmouseout="cambiaEstilo(this)">
+            contenidos
+        </div>
+    </body>
+</html>

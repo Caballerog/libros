@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onBlur en Formularios</title>
+    </head>
+
+    <body>
+        <p>Cuando el formulario es reiniciado se ejecuta el manejador de eventos onreset.</p>
+        <form id="form">Introduzca información:
+            <input type="text">
+            <input type="submit"> </form>
+    </body>
+    <script>
+        var x = document.getElementById('formulario');
+        x.addEventListener('submit', submit, false);
+
+        function submit(e) {
+            alert("El formulario fue enviado");
+            e.preventDefault();
+        }
+    </script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Ejemplo 6.18.</title>
+    </head>
+
+    <body>
+        <p>Ejemplo de eventos con mouse(over,out,up)</p>
+        <p id="elemento1">Accionador de evento</p>
+        <p id="r"></p>
+        <script>
+            var x = document.getElementById("elemento1");
+            var r = document.getElementById("r");
+            x.addEventListener("mouseover", mouseOver);
+            x.addEventListener("mouseup", mouseUp);
+            x.addEventListener("mouseout", mouseOut)
+
+            function mouseOver() {
+                r.innerHTML += "Accionado evento mouseover <br>";
+            }
+
+            function mouseUp() {
+                r.innerHTML += "Accionado evento mouseup <br>";
+            }
+
+            function mouseOut() {
+                r.innerHTML += "Accionado evento mouseout <br>";
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onKey</title>
+    </head>
+
+    <body>
+        <p>KeyDown es el evento que se ejecuta cuando el usuario está pulsando una tecla. Funciona con cualquier tecla.</p>
+        <p>KeyUp se ejecuta cuando el usuario suelta una tecla.Funciona con cualquier tecla</p>
+        <p>KeyPress se ejecuta cuando el usuario presiona una tecla. No funciona con teclas especiales ALT, CTRL, SHIFT, ESC,etc</p>
+        <p>Pulsa (KeyDown) y suelta (KeyUp) cualquier tecla para ver cómo cambia de color la caja
+            <input type="text" id="textoEvento">
+        </p>
+        Presiona una tecla (KeyPress) y el programa te dirá cuál has presionado
+        <input type="text" id="textoEvento2">
+        <script type="text/javascript">
+            document.getElementById("textoEvento").addEventListener("keydown", keyDown);
+            document.getElementById("textoEvento").addEventListener("keyup", keyUp);
+            document.getElementById("textoEvento2").addEventListener("keypress", keyPress);
+
+            function keyDown() {
+                this.style.backgroundColor = "red";
+            }
+
+            function keyUp() {
+                this.style.backgroundColor = "green";
+            }
+
+            function keyPress(evObject) {
+                var teclaPulsada = String.fromCharCode(evObject.which);
+                if (evObject.which !== 0 && evObject.which !== 13)
+                    alert("La tecla pulsada es " + teclaPulsada);
+                else
+                    alert("La tecla pulsada es una tecla especial");
+
+            }
+        </script>
+    </body>
+
+</html>

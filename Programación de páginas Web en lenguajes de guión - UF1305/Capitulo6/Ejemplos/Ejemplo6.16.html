@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <p id="elemento1">
+            Si pulsas sobre el párrafo el evento mousedown se disparará y el color de este párrafo se volverá amarillo (mientras permanezca pulsado). El evento mouseup se disparará cuando se suelte el ratón y el color del texto se pondrá rojo.
+        </p>
+        <script>
+            function mouseDown(e) {
+                e.style.color = "yellow";
+            }
+
+            function mouseUp(e) {
+                e.style.color = "red";
+            }
+            var e = document.getElementById("elemento1");
+            e.addEventListener('mousedown', function() {
+                mouseDown(e);
+            }, false);
+            e.addEventListener('mouseup', function() {
+                mouseUp(e);
+            }, false);
+        </script>
+    </body>
+
+</html>

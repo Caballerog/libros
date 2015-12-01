@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onLoad</title>
+    </head>
+
+    <body>
+        <div id="info">
+            <p>El evento load se dispara cuando carga todo el documento para evitar que se produzcan errores por elementos que aun no se hayan cargado en el DOM cuando son utilizados en javascript.</p>
+        </div>
+        <div id="resultado"></div>
+    </body>
+    <script>
+        window.onload = function() {
+            var r = document.getElementById('resultado');
+            var nDiv = document.createElement("div");
+            nDiv.setAttribute("id", "nDiv");
+            nDiv.innerHTML = "Este div con texto se ha introducido tras cargar la página";
+            r.appendChild(nDiv);
+        };
+    </script>
+
+</html>

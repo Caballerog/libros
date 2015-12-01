@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Evento onChange </title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <label for="colores">Colores</label>
+        <select id="colores" name="colores">
+            <option value="." selected="selected">Seleccione color</option>
+            <option value="r">Rojo</option>
+            <option value="v">Verde</option>
+            <option value="a">Azul</option>
+        </select>
+        <div id="contenido"></div>
+    </body>
+    <script>
+        var selColor = document.getElementById("colores");
+        var contenido = document.getElementById("contenido");
+        selColor.onchange = function() {
+            var color = selColor.value;
+            contenido.innerHTML = " ";
+            if (color == 'r') document.body.style.backgroundColor = "red";
+            else if (color == 'v') document.body.style.backgroundColor = "green";
+            else if (color == 'a') document.body.style.backgroundColor = "blue";
+            else {
+                document.body.style.backgroundColor = "white";
+                contenido.innerHTML = "No ha seleccionado nada";
+            }
+        }
+    </script>
+
+</html>

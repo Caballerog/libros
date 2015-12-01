@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onBlur</title>
+    </head>
+
+    <body>
+
+        <div>
+            <p>Evento onblur</p>
+            <p>Consiste en poder hacer una acción cuando el elemento pierde el foco.</p>
+            <p>Entre y salga del cuadro de texto.</p>
+            <input type="text" onblur="estado(this)">
+        </div>
+    </body>
+    <script>
+        function estado(text) {
+            if (text.value === "") alert("El campo de texto está vacío.");
+            else alert("El campo de texto contiene texto.");
+        }
+    </script>
+
+</html>

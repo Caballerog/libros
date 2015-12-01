@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onAbort</title>
+    </head>
+
+    <body>
+        <img src="img/imagenPesada.jpg" id="imgP">
+    </body>
+    <script>
+        var imgP = document.getElementById('imgP');
+        imgP.addEventListener("abort", function() {
+            alert('Abortada la carga de la imagen');
+        });
+    </script>
+
+</html>

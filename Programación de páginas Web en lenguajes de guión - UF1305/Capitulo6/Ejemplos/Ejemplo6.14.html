@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onSelect en formulario</title>
+        <style type="text/css">
+            #txtExplica {
+                text-align: justify;
+                margin: 5% 25% 1% 25%;
+                float: left;
+            }
+
+            #divForm {
+                margin: 6% 5% 2% 20%;
+                float: left;
+            }
+
+            #mostrar {
+                margin: 5%;
+                float: left;
+            }
+
+            #txtNombre {
+                margin: 20px;
+            }
+
+            #txtClave {
+                margin: 20px;
+            }
+
+            #txtComentario {
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            function seleccionTxt(event) {
+                document.getElementById('mostrar').innerHTML = 'Has seleccionado el elemento del formulario ' + event.target.getAttribute('name');
+            }
+            window.onload = function() {
+                document.getElementById("txtComentario").onselect = seleccionTxt;
+                document.getElementById('txtClave').onselect = seleccionTxt;
+                document.getElementById('txtNombre').onselect = seleccionTxt;
+            }
+        </script>
+        <div id="explica">
+            <p id="txtExplica"> El evento "onselect" de Javascript asociado a un formulario, se aplica usualmente sobre los elementos &lt;input&gt; y &lt;textarea&gt;, aunque también son soportados para los siguientes elementos: &lt;input type="file"&gt;, &lt;input type="password"&gt;
+                y &lt;keygen&gt;. </p>
+        </div>
+        <div id="divForm">
+            <form name="formulario1" action=""> Nombre:
+                <input type="text" name="nombre" id="txtNombre" value="Escriba su nombre" /> Contraseña:
+                <input type="password" name="password" id="txtClave" value="Escriba su contraseña" /> Comentario:
+                <textarea name="comentario" id="txtComentario" rows="1" cols="30"> Selecciona el texto</textarea>
+            </form>
+        </div>
+        <div id="mostrar"></div>
+    </body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>onResize</title>
+    </head>
+
+    <body id="elemento1" onresize="resize()">
+        <p>Cambie el tamaño de la ventana y verá la altura y la anchura en tiempo real.</p>
+        <p id="resultado"></p>
+    </body>
+    <script>
+        var r = document.getElementById('resultado');
+
+        function resize() {
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+            var txt = "Tamaño de la ventana: width=" + w + ", height=" + h;
+            r.innerHTML = txt;
+        }
+    </script>
+</html>

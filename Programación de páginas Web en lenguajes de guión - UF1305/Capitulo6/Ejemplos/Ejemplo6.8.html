@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Ejemplo 6.8.</title>
+    </head>
+
+    <body>
+        <div id="elemento1">Evento click</div>
+        <script>
+            function pintar(argumento1) {}
+            window.onload = function() {
+                document.getElementById("elemento1").onclick = function() {
+                    pintar(argumento1);
+                };
+            }
+        </script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>onError</title>
+    </head>
+
+    <body>
+        <img id="imagen" src="imagenNoExiste.jpg" onerror="error()">
+        <p id="resultado"></p>
+    </body>
+    <script>
+        var r = document.getElementById('resultado');
+
+        function error() {
+            r.innerHTML = "La función se activa si se produce un error al cargar la imagen. ";
+        }
+    </script>
+
+</html>
