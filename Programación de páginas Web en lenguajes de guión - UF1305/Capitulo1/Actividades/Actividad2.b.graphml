@@ -20,7 +20,7 @@
           <y:Geometry height="40.0" width="138.38766114180478" x="73.30616942909761" y="139.33793818421321"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="86.76953125" x="25.809064945902392" y="11.015625">Leer(OPCION)<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="90.572265625" x="23.907697758402392" y="11.015625">LEER(OPCION)<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -68,7 +68,7 @@
           <y:Geometry height="40.0" width="465.4616600803151" x="-90.2308300401576" y="327.9331397393595"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="254.6875" x="105.38708004015754" y="11.015625">Escribir("Introduzca dos números reales")<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="265.66796875" x="99.89684566515754" y="11.015625">ESCRIBIR("Introduzca dos números reales")<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -84,7 +84,7 @@
           <y:Geometry height="40.0" width="465.4616600803151" x="-90.23083004015757" y="431.5259249667484"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="118.873046875" x="173.29430660265754" y="11.015625">Leer(NUM1, NUM2)<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="122.67578125" x="171.39293941515754" y="11.015625">LEER(NUM1, NUM2)<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -116,12 +116,12 @@
           <y:Geometry height="120.0" width="384.0" x="-19.499999999999943" y="-12.909037476127153"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="87.8125" modelName="custom" textColor="#000000" visible="true" width="326.125" x="28.9375" y="16.09375">Escribir("Seleccione una de las siguiente sopciones");
-Escribir("1. SUMA")
-Escribir("2. RESTAR")
-Escribir("3. MULTIPLICAR")
-Escribir("4. DIVIDIR")
-Escribir("0. SALIR")<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="87.8125" modelName="custom" textColor="#000000" visible="true" width="337.10546875" x="23.447265625" y="16.09375">ESCRIBIR("Seleccione una de las siguiente sopciones");
+ESCRIBIR("1. SUMA")
+ESCRIBIR("2. RESTAR")
+ESCRIBIR("3. MULTIPLICAR")
+ESCRIBIR("4. DIVIDIR")
+ESCRIBIR("0. SALIR")<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>

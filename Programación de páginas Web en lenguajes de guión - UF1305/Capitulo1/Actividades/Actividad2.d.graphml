@@ -20,7 +20,7 @@
           <y:Geometry height="40.0" width="319.2313934494161" x="-17.115696724708044" y="-29.56257038655002"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="209.83984375" x="54.695774849708044" y="11.015625">Escribir("Introduzca un número: ")<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="220.8203125" x="49.205540474708044" y="11.015625">ESCRIBIR("Introduzca un número: ")<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -68,7 +68,7 @@
           <y:Geometry height="40.0" width="319.2313934494161" x="-17.115696724708044" y="74.59339446863862"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="75.49609375" x="121.86764984970804" y="11.015625">Leer(NUM1)<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="79.298828125" x="119.96628266220804" y="11.015625">LEER(NUM1)<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -79,7 +79,6 @@
       </data>
     </node>
     <node id="n4">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.decision">
           <y:Geometry height="89.87795431529901" width="120.46701953882746" x="82.26649023058629" y="155.7436554822625"/>
@@ -101,7 +100,7 @@
           <y:Geometry height="40.0" width="319.2313934494161" x="190.37441683122123" y="316.4040735867089"/>
           <y:Fill color="#E8EEF7" color2="#B7C9E3" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="312.54296875" x="3.3442123497080445" y="11.015625">Escribir("El factorial de ", NUM, " es ", PRODUCTO")<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="323.5234375" x="-2.1460220252919555" y="11.015625">ESCRIBIR("El factorial de ", NUM, " es ", PRODUCTO")<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -112,7 +111,6 @@
       </data>
     </node>
     <node id="n6">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="270.10088248472425" x="-109.72646565350303" y="311.2403012300113"/>
@@ -129,7 +127,6 @@
       </data>
     </node>
     <node id="n7">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="270.10088248472425" x="-109.72646565350304" y="404.4085555170791"/>
@@ -146,7 +143,6 @@
       </data>
     </node>
     <node id="n8">
-      <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="40.0" width="245.63245206589835" x="19.683773967050826" y="-99.56257038655002"/>
@@ -164,7 +160,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </node>
     <edge id="e0" source="n4" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -185,7 +180,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e1" source="n5" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -196,7 +190,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e2" source="n4" target="n6">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -217,7 +210,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e3" source="n2" target="n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -228,7 +220,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e4" source="n8" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -239,7 +230,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e5" source="n0" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -250,7 +240,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e6" source="n3" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -261,7 +250,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n6" target="n7">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -272,7 +260,6 @@ PRODUCTO = 1<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n7" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-44.77257852223079">
