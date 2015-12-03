@@ -6,10 +6,10 @@ calculado se le debe aumentar el 21% correspondiente al IVA.
             ARTICULOS es un número real.
   CONSTANTES: IVA = 1.21
   Inicio
-    Escribir "Introduzca el número de artículos vendidos"
-    Leer ARTICULOS
-    Escribir "Introduzca el precio de cada artículo"
-    Leer PRECIO
+    ESCRIBIR "Introduzca el número de artículos vendidos"
+    LEER ARTICULOS
+    ESCRIBIR "Introduzca el precio de cada artículo"
+    LEER PRECIO
     Calcular RESULTADO = (PRECIO * ARTICULOS) * IVA
-    Escribir "El coste total es " RESULTADO
+    ESCRIBIR "El coste total es " RESULTADO
   Fin

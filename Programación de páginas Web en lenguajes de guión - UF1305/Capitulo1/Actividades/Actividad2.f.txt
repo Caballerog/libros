@@ -5,8 +5,8 @@ los números ordenados de menor a mayor.
             MEDIANO1, MEDIANO2, MAYOR son números enteros.
   CONSTANTES: no se utiliza ninguna
   Inicio
-    Escribir "Introduzca cuatro números en orden aleatorio"
-    Leer A, B, C, D
+    ESCRIBIR "Introduzca cuatro números en orden aleatorio"
+    LEER A, B, C, D
     Si A < B
       INFERIOR1 = A
       SUPERIOR1 = B
@@ -40,8 +40,8 @@ los números ordenados de menor a mayor.
     Fin Si
 
     Si MEDIANO1 < MEDIANO2
-      Escribir MENOR MEDIANO1 MEDIANO2 MAYOR
+      ESCRIBIR MENOR MEDIANO1 MEDIANO2 MAYOR
     Sino
-      Escribir MENOR MEDIANO2 MEDIANO1 MAYOR
+      ESCRIBIR MENOR MEDIANO2 MEDIANO1 MAYOR
     Fin Si
   Fin

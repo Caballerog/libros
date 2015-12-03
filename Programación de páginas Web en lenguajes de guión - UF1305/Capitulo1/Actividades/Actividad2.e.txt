@@ -7,15 +7,15 @@ contrario se mostrará el mensaje "El número no está en el rango".
   VARIABLES: LIMITE_INFERIOR, LIMITE_SUPERIOR, NUMERO son números enteros.
   CONSTANTES: no se utiliza ninguna
   Inicio
-      Escribir "Introduzca el límite inferior"
-      Leer LIMITE_INFERIOR
-      Escribir "Introduzca el límite superior"
-      Leer LIMITE_SUPERIOR
-      Escribir "Introduzca el número a comprobar"
-      Leer NUMERO
+      ESCRIBIR "Introduzca el límite inferior"
+      LEER LIMITE_INFERIOR
+      ESCRIBIR "Introduzca el límite superior"
+      LEER LIMITE_SUPERIOR
+      ESCRIBIR "Introduzca el número a comprobar"
+      LEER NUMERO
       Si LIMITE_INFERIOR <= NUMERO y NUMERO <= LIMITE_SUPERIOR
-        Escribir "El número está en el rango"
+        ESCRIBIR "El número está en el rango"
       Sino
-        Escribir "El número no está en el rango"
+        ESCRIBIR "El número no está en el rango"
       Fin Si
   Fin

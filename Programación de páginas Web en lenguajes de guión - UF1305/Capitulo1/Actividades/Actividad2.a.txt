@@ -3,14 +3,14 @@ mostrará el resultado de la suma, resta, multiplicación y división
   VARIABLES: NUM1, NUM2, SUMA, RESTA, MULTIPLICACIÓN, DIVISIÓN son números reales.
   CONSTANTES: no se utiliza ninguna
   Inicio
-    Escribir “Introduzca dos números reales: ”
-    Leer NUM1, NUM2
+    ESCRIBIR “Introduzca dos números reales: ”
+    LEER NUM1, NUM2
     Calcular SUMA = NUM1 + NUM2
     Calcular RESTA = NUM1 - NUM2
     Calcular MULTIPLICACIÓN = NUM1 * NUM2
     Calcular DIVISIÓN = NUM1 / NUM2
-    Escribir "La suma de los dos números es " SUMA
-    Escribir "La resta de los dos números es " RESTA
-    Escribir "La multiplicación de los dos números es " MULTIPLICACIÓN
-    Escribir "La división de los dos números es " DIVISIÓN
+    ESCRIBIR "La suma de los dos números es " SUMA
+    ESCRIBIR "La resta de los dos números es " RESTA
+    ESCRIBIR "La multiplicación de los dos números es " MULTIPLICACIÓN
+    ESCRIBIR "La división de los dos números es " DIVISIÓN
   Fin

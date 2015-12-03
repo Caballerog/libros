@@ -2,11 +2,11 @@ Compara números
   VARIABLES: NUMERO1 es un número real.
   CONSTANTES: VALOR1 es un número real.
   Inicio
-    Escribir “Introduzca el número”
-    Leer NUMERO1
+    ESCRIBIR “Introduzca el número”
+    LEER NUMERO1
     Si NUMERO1 == VALOR1
-      Escribir “Los números son iguales”;
+      ESCRIBIR “Los números son iguales”;
     Sino
-      Escribir “Los números son diferentes”;
+      ESCRIBIR “Los números son diferentes”;
     Fin Si
   Fin

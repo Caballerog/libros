@@ -7,17 +7,17 @@ usuario el resultado de la operación.
   CONSTANTES: no se utiliza ninguna
   Inicio
     Mientras OPCION es diferente a [0-4]
-      Escribir "Seleccione una de las siguientes opciones"
-      Escribir "1. SUMA"
-      Escribir "2. RESTAR"
-      Escribir "3. MULTIPLICAR"
-      Escribir "4. DIVIDIR"
-      Escribir "0. SALIR"
-      Leer OPCION
+      ESCRIBIR "Seleccione una de las siguientes opciones"
+      ESCRIBIR "1. SUMA"
+      ESCRIBIR "2. RESTAR"
+      ESCRIBIR "3. MULTIPLICAR"
+      ESCRIBIR "4. DIVIDIR"
+      ESCRIBIR "0. SALIR"
+      LEER OPCION
     Fin Mientras
     SI OPCION != 0
-      Escribir “Introduzca dos números reales”
-      Leer NUM1, NUM2
+      ESCRIBIR “Introduzca dos números reales”
+      LEER NUM1, NUM2
       Si OPCION == 1
         Calcular RESULTADO = NUM1 + NUM2
       Sino Si OPCION == 2
@@ -27,6 +27,6 @@ usuario el resultado de la operación.
       Sino
         Calcular RESULTADO = NUM1 / NUM2
       Fin Si
-      Escribir "El resultado de su operación es " RESULTADO
+      ESCRIBIR "El resultado de su operación es " RESULTADO
     Fin Si
   Fin

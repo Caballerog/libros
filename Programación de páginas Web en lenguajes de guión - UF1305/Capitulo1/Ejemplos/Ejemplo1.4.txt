@@ -3,8 +3,8 @@ Calcular y mostrar la suma de los cinco primeros números entre 1 y 1000 que sea
             CONTADOR=0 es un número entero
   CONSTANTES: MAXIMO_NUMERO=1000, PRIMEROS=5;
   Inicio
-    Escribir “Introduzca el número entre el que debe ser divisor”
-    Leer DIVISOR
+    ESCRIBIR “Introduzca el número entre el que debe ser divisor”
+    LEER DIVISOR
     Para NUMERO desde 1 hasta MAXIMO_NUMERO hacer
       Si DIVISOR divide a NUMERO
         SUMA = SUMA + NUMERO;
@@ -14,5 +14,5 @@ Calcular y mostrar la suma de los cinco primeros números entre 1 y 1000 que sea
         Interrumpir
       Fin Si.
     Fin Para
-    Escribir “La suma de los números es “SUMA;
+    ESCRIBIR “La suma de los números es “SUMA;
   Fin

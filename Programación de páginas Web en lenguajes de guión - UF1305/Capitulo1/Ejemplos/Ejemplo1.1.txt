@@ -2,8 +2,8 @@ Cálculo del área de un rectángulo
   VARIABLES: BASE, ALTURA, AREA son números reales.
   CONSTANTES: no se utiliza ninguna
   Inicio
-    Escribir “Introduzca la base y la altura”
-    Leer BASE, ALTURA
+    ESCRIBIR “Introduzca la base y la altura”
+    LEER BASE, ALTURA
     Calcular AREA = BASE * ALTURA
-    Escribir “El área del rectángulo es “AREA
+    ESCRIBIR “El área del rectángulo es “AREA
   Fin

@@ -5,10 +5,10 @@ usuario el resultado de la operación.
   VARIABLES: NUM1, CONTADOR = 1, PRODUCTO = 1 son números enteros.
   CONSTANTES: no se utiliza ninguna
   Inicio
-    Escribir "Introduzca un número"
-    Leer NUM1
+    ESCRIBIR "Introduzca un número"
+    LEER NUM1
     Para CONTADOR = 1 HASTA CONTADOR = NUM1
       Calcular Producto = Producto * CONTADOR
     Fin Para
-    Escribir "El factorial de " NUM1 " es " PRODUCTO
+    ESCRIBIR "El factorial de " NUM1 " es " PRODUCTO
   Fin

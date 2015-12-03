@@ -2,10 +2,10 @@ Suma y producto de dos números
   VARIABLES: NUMERO1, NUMERO2, SUMA, PRODUCTO son números reales.
   CONSTANTES: no se utiliza ninguna
   Inicio
-    Escribir “Introduzca los números”
-    Leer NUMERO1, NUMERO2
+    ESCRIBIR “Introduzca los números”
+    LEER NUMERO1, NUMERO2
     Calcular  SUMA = NUMERO1 + NUMERO2;
     Calcular PRODUCTO = NUMERO1 * NUMERO2;
-    Escribir “La suma de los dos números es “SUMA;
-    Escribir “El producto de los dos números es “PRODUCTO;
+    ESCRIBIR “La suma de los dos números es “ SUMA;
+    ESCRIBIR “El producto de los dos números es “ PRODUCTO;
   Fin

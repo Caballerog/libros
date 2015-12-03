@@ -2,11 +2,11 @@ Se pide al usuario un carácter y el sistema mostrará si el carácter es vocal 
   VARIABLES: CARACTER es un carácter.
   CONSTANTES: no se utiliza ninguna
   Inicio
-      Escribir "Introduzca un carácter"
-      Leer CARACTER
+      ESCRIBIR "Introduzca un carácter"
+      LEER CARACTER
       Si CARACTER == 'a' ó CARACTER == 'e' ó CARACTER == 'i' ó CARACTER == 'o' ó CARACTER == 'u'
-        Escribir "El carácter introducido es una vocal"
+        ESCRIBIR "El carácter introducido es una vocal"
       Sino
-        Escribir "El carácter introducido no es una vocal"
+        ESCRIBIR "El carácter introducido no es una vocal"
       Fin Si
   Fin
