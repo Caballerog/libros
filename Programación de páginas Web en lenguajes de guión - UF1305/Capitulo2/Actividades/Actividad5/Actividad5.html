@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Actividad 5</title>
+        <link rel="stylesheet" href="css/actividad5.css">
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Actividad 5 - Cree una página Web que solicite los datos para dar de alta a un cliente (agrupe los elementos del formulario según el tipo de datos que solicita).
+            </p>
+            <p>
+                Los estilos provienen de la siguiente Web: <a href="http://www.sanwebe.com/2013/10/css-html-form-styles">http://www.sanwebe.com/2013/10/css-html-form-styles</a>
+            </p>
+            <ul>
+                <li>
+                    DNI, Nombre, Apellidos y Fecha de nacimiento.
+                </li>
+                <li>
+                    Provincia, población y dirección.
+                </li>
+                <li>
+                    Email, teléfono fijo, teléfono móvil.
+                </li>
+                <li>
+                    Facebook, twitter, instagram, etc.
+                </li>
+                <li>
+                    Botones para enviar, cancelar y restablecer el formulario.
+                </li>
+            </ul>
+        </header>
+        <main>
+            <form action="" method="post" class="basic-grey">
+                <h1>Formulario de contacto
+                    <span>Rellena todos los elementos del formulario.</span>
+                </h1>
+                <label>
+                    <span>DNI:</span>
+                    <input id="dni" type="text" name="dni" placeholder="Introduzca tu DNI" />
+                </label>
+                <label>
+                    <span>Nombre:</span>
+                    <input id="nombre" type="text" name="nombre" placeholder="Introduzca su nombre" />
+                </label>
+                <label>
+                    <span>Apellidos:</span>
+                    <input id="apellidos" type="text" name="apellidos" placeholder="Introduzca sus apellidos" />
+                </label>
+
+                <label>
+                    <span>Fecha de nacimiento:</span>
+                    <input id="nacimiento" type="text" name="nacimiento" placeholder="Introduzca su fecha de nacimiento" />
+                </label>
+
+                <label>
+                    <span>Provincia:</span>
+                    <select id="provincia" type="text" name="provincia">
+                        <option value="Madrid"> Madrid </option>
+                        <option value="Malaga"> Málaga </option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Población:</span>
+                    <select id="poblacion" type="text" name="poblacion">
+                        <option value="Madrid"> Fuenlabrada </option>
+                        <option value="Malaga"> Marbella </option>
+                    </select>
+                </label>
+                <label>
+                    <span>Email:</span>
+                    <input id="email" type="email" name="email" placeholder="Introduzca su correo electrónico" />
+                </label>
+
+                <label>
+                    <span>Teléfono Fijo:</span>
+                    <input id="telefonoFijo" type="tel" name="telefonoFijo" placeholder="Introduzca su teléfono fijo" />
+                </label>
+
+                <label>
+                    <span>Teléfono Móvil:</span>
+                    <input id="telefonoMovil" type="tel" name="telefonoMovil" placeholder="Introduzca su teléfono movil" />
+                </label>
+
+                <label>
+                    <span>Facebok:</span>
+                    <input id="facebook" type="text" name="facebook" placeholder="Introduzca su Facebook" />
+                </label>
+
+                <label>
+                    <span>Twitter:</span>
+                    <input id="twitter" type="text" name="twitter" placeholder="Introduzca su Twitter" />
+                </label>
+
+                <label>
+                    <span>Instagram:</span>
+                    <input id="instagram" type="text" name="instagram" placeholder="Introduzca su Instagram" />
+                </label>
+                <label>
+                    <span>&nbsp;</span>
+                    <button type="submit" class="button">Enviar</button>
+                    <button type="button" class="button">Cancelar </button>
+                    <button type="reset" class="button">Restablecer </button>
+                </label>
+            </form>
+
+        </main>
+        <footer>
+            <!-- Pie de Página -->
+        </footer>
+    </body>
+
+</html>
