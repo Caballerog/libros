@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 3 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+              De un trabajador se conoce su sueldo base y los años de antigüedad.
+            </p>
+            <p>
+            Se debe desarrollar una aplicación que lea los datos de entrada y genere la siguiente salida:
+            </p>
+            <ol>
+              <li>
+                Si el sueldo es inferior a 500€ y su antigüedad es igual o superior a 10 años se le dará
+                un plus de 20%.
+              </li>
+              <li>
+                Si el sueldo es inferior a 500€ y su antigüedad es menor a 10 años se le dará un plus de 5%.
+              </li>
+              <li>
+                Si el sueldo es mayor o igual a 500€ no tendrá ningún plus.
+              </li>
+            </ol>
+            </header>
+        <main>
+            <script>
+                var sueldoBase = parseFloat(prompt('Sueldo base:'));
+                var experiencia = parseInt(prompt('Años de antigüedad'));
+                if(isNaN(sueldoBase)){
+                  document.write('Usted ha introducido un sueldo base incorrecto.');
+                }else if(isNaN(experiencia)){
+                  document.write('Usted ha introducido una cantidad de años de antigüedad incorrecta');
+                }else{
+                  document.write('Su sueldo original es: ' + sueldoBase + '<br>');
+
+                  if(sueldoBase < 500 && experiencia >= 10){
+                      document.write('Su sueldo tras el plus es: ' + sueldoBase * 1.20);
+                  }else if(sueldoBase < 500 && experiencia < 10){
+                      document.write('Su sueldo tras el plus es ' + sueldoBase * 1.05);
+                  }else{
+                      document.write('Su sueldo no tiene plus');
+                  }
+                }
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

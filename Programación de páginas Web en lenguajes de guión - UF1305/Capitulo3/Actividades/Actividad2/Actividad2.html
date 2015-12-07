@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 2 </title>
+    </head>
+
+    <body>
+        <header>
+            Construye una página Web en la que se pida el precio de un artículo
+            y la cantidad de productos que toma el cliente. Debe mostrar el coste
+            a abonar por el comprador. Teniendo en cuenta que debe separar el
+            precio con y sin IVA.
+        </header>
+        <main>
+            <script>
+                var precio = parseFloat(prompt('Precio del producto:'));
+                var numeroProductos = parseInt(prompt('Número de productos'));
+                var IVA = 1.21;
+                var precioIVA;
+                if(isNaN(precio)){
+                  document.write('Usted ha introducido un precio inválido.');
+                }else if(isNaN(numeroProductos)){
+                  document.write('Usted ha introducido una cantidad inválida');
+                }else{
+                  document.write('El precio total sin IVA: ' + precio * numeroProductos);
+                  document.write('<br>El precio total con IVA: ' + precio * numeroProductos * IVA);
+                }
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

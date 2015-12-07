@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 6 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Se dispone de tres arrays con la información de las edades de tres aulas de alumnos:
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        Las edades de 15 alumnos de la clase A.
+                    </li>
+                    <li>
+                        Las edades de 20 alumnos de la clase B.
+                    </li>
+                    <li>
+                        Las edades de 24 alumnos de la clase C.
+                    </li>
+                </ol>
+            </p>
+            <p>
+                Se debe mostrar por pantalla la media de las edades de cada clase y la clase que tiene la media mayor. </p>
+        </header>
+        <main>
+            <script>
+                var mediaA, mediaB, mediaC, claseMayor;
+                var claseA = [17, 18, 20, 15, 29, 49, 23, 18, 19, 31, 17, 17, 15, 16, 15];
+                var claseB = [17, 15, 22, 16, 21, 29, 24, 15, 24, 21, 57, 47, 25, 36, 16, 18, 20, 21, 16, 17];
+                var claseC = [18, 22, 22, 23, 24, 13, 33, 12, 23, 22, 17, 34, 23, 21, 17, 12, 23, 24, 23, 24, 27, 32, 31, 44, 32];
+
+                mediaA = calcularMedia(claseA);
+                mediaB = calcularMedia(claseB);
+                mediaC = calcularMedia(claseC);
+                claseMayor = mayor(mediaA, mediaB, mediaC);
+
+                document.write('La media de edad de la clase A es: ' + mediaA.toFixed(2));
+                document.write('<br>La media de edad de la clase B es: ' + mediaB.toFixed(2));
+                document.write('<br>La media de edad de la clase C es: ' + mediaC.toFixed(2));
+                document.write('<br>La clase con la media mayor es: ' + claseMayor);
+
+
+                function calcularMedia(clase) {
+                    var tamanho = clase.length;
+                    var suma = 0;
+                    for (var i = 0; i < tamanho; i++) {
+                        suma += clase[i];
+                    }
+                    return suma / tamanho;
+                }
+
+                function mayor(mediaA, mediaB, mediaC) {
+                    var claseMayor;
+                    if (mediaA > mediaB) {
+                        if (mediaA > mediaC) {
+                            claseMayor = 'A';
+                        } else {
+                            claseMayor = 'C';
+                        }
+                    } else {
+                        if (mediaB > mediaC) {
+                            claseMayor = 'B';
+                        } else {
+                            claseMayor = 'C';
+                        }
+                    }
+                    return claseMayor;
+                }
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

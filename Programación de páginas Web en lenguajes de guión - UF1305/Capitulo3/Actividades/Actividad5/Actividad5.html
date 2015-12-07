@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 5 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Desarrollar una aplicación que permita introducir un número cualquiera (entero) y devuelva su tabla de multiplicar (solo los 10 primeros términos).
+            </p>
+            <p>
+                Es decir si se introduce el 2, se devolverá 0, 2, 4, 6, 8, 10, 12 ,14, 16, 20.
+            </p>
+        </header>
+        <main>
+            <script>
+                var tabla = parseInt(prompt('Introduzca la tabla de multiplicar a calcular'));
+                for (var i = 0; i <= 10; i++) {
+                    document.write('<br>' + tabla + " * " + i + " = " + tabla * i);
+                }
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

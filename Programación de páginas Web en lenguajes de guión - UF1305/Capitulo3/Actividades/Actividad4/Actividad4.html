@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 4 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Una empresa tiene 10 empleados cuyos sueldos oscilan entre 600€ y 2000€.
+            </p>
+            <p>
+                Se debe realizar un programa que lea por teclado los sueldos que cobra cada empleado e informe de cuantos cobran entre 600€ y 1000€, cuantos entre 1000€ y 1500€ y cuantos más de 1500€.</p>
+            <p>
+                Tenga en cuenta que si se introduce un salario menor de 600€ o mayor de 2000€ debe volver a solicitar dicho salario.
+            </p>
+        </header>
+        <main>
+            <script>
+                /* Variables y constantes del problema */
+                var numSueldosAltos = 0;
+                var numSueldosMedios = 0;
+                var numSueldosBajos = 0;
+                var numSueldosIntroducidos = 0;
+                var sueldoTrabajador;
+                var NUM_EMPLEADOS = 10;
+
+                /* Petición de sueldos de los trabajadores */
+                while (numSueldosIntroducidos < NUM_EMPLEADOS) {
+                    sueldoTrabajador = parseFloat(prompt('Introduzca el sueldo del trabajador: ' + (numSueldosIntroducidos + 1)));
+                    if (isNaN(sueldoTrabajador)) {
+                        alert('Ha introducido una cifra incorrecta para el sueldo del trabajador. Repítala');
+                    } else if (sueldoTrabajador >= 600 && sueldoTrabajador < 1000) {
+                        numSueldosBajos++;
+                        numSueldosIntroducidos++;
+                    } else if (sueldoTrabajador >= 1000 && sueldoTrabajador < 1500) {
+                        numSueldosMedios++;
+                        numSueldosIntroducidos++;
+                    } else if (sueldoTrabajador >= 1500 && sueldoTrabajador < 2000) {
+                        numSueldosAltos++;
+                        numSueldosIntroducidos++;
+                    } else {
+                        alert('La cifra del sueldo debe estar comprendida entre 600 y 2000. Repítala');
+                    }
+                }
+                document.write('La cantidad de sueldos bajos es: ' + numSueldosBajos);
+                document.write('<br>La cantidad de sueldos medios es: ' + numSueldosMedios);
+                document.write('<br>La cantidad de sueldos altos es: ' + numSueldosAltos);
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>
