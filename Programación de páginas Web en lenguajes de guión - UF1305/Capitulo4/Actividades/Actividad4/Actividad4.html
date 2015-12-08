@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 4 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Realiza lo mismo que en el ejercicio anterior pero la captura del
+                error se realizará haciendo uso del evento onerror gestión del error será
+                invocar la función Math.power de manera adecuada.
+            </p>
+        </header>
+        <main>
+            <input id="txtCuadrado" type="text" placeholder="Introduzca el valor a calcular">
+            <input id="btnCalcular" type="button" value="¡Calcular!">
+            <script>
+                var txtCuadrado = document.getElementById('txtCuadrado');
+                var valor;
+                btnCalcular.onclick = function() {
+                    valor = txtCuadrado.value;
+                    Math.poww(valor, 2);
+                }
+                window.onerror = function(e){
+                  alert('El Cuadrado de ' + valor + ' es ' + Math.pow(valor, 2));
+                }
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

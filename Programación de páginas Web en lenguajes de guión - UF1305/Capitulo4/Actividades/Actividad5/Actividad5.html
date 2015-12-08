@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 5 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Construya una calculadora Web que lea un número A y otro número B y calcule "A/B".
+            </p>
+            <p>
+                Incorpore la gestión de excepciones y muestre mensajes a los usuarios en los casos en los que B = 0 y B = "Hola".
+            </p>
+        </header>
+        <main>
+            <script>
+                var A = parseFloat(prompt('Introduzca el número A'));
+                var B = parseFloat(prompt('Introduzca el número B'));
+                var operacion = prompt('Introduzca la operación (+,-,*,/)');
+                var resultado;
+                try{
+                  resultado = calculadora(A,B,operacion);
+                  console.log(resultado);
+                  document.write('El resultado es ' + resultado);
+                }catch(e){
+                  alert(e.message);
+                }
+
+                function calculadora(A,B,operacion){
+                  var resultado;
+                  if(operacion == '+' || operacion == '-' || operacion == '*' || operacion == '/'){
+                    if(isNaN(A)){
+                      throw new Error('Error: A no es un número');
+                    }else if(isNaN(B)){
+                      throw new Error('Error: B no es un número');
+                    }else if(operacion == '/' && B == 0){
+                      throw new Error('Error: Se está dividiendo entre 0');
+                    }
+                    resultado = eval(A + operacion + B);
+                  }else{
+                    throw new Error('Error: Operacion no adecuada');
+                  }
+                  return resultado;
+                }
+
+
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

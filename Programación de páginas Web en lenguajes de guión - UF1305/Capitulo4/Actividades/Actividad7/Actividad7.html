@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Actividad 7</title>
+        <link rel="stylesheet" href="css/actividad7.css">
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Actividad 7 - Construya una página Web en la que se solicite a un usuario los datos correspondientes a su ficha: DNI, teléfono, nombre, apellidos y edad.
+            </p>
+            <p>
+                Incorpore gestión de excepciones para reconducir al usuario en caso de que introduzca datos erróneos mediante mensajes de error.
+            </p>
+            <p>
+                En ningún momento puede existir un error no capturado en el código.
+            </p>
+            <p>
+                Los estilos provienen de la siguiente Web: <a href="http://www.sanwebe.com/2013/10/css-html-form-styles">http://www.sanwebe.com/2013/10/css-html-form-styles</a>
+            </p>
+        </header>
+        <main>
+            <form action="" method="post" class="basic-grey">
+                <h1>Formulario de contacto
+                    <span>Rellena todos los elementos del formulario.</span>
+                </h1>
+                <label>
+                    <span>DNI:</span>
+                    <input id="dni" type="text" name="dni" placeholder="Introduzca tu DNI" />
+                </label>
+                <label>
+                    <span>Nombre:</span>
+                    <input id="nombre" type="text" name="nombre" placeholder="Introduzca su nombre" />
+                </label>
+                <label>
+                    <span>Apellidos:</span>
+                    <input id="apellidos" type="text" name="apellidos" placeholder="Introduzca sus apellidos" />
+                </label>
+
+                <label>
+                    <span>Edad:</span>
+                    <input id="edad" type="text" name="edad" placeholder="Introduzca su edad" />
+                </label>
+
+                <label>
+                    <span>Teléfono Fijo:</span>
+                    <input id="telefonoFijo" type="tel" name="telefonoFijo" placeholder="Introduzca su teléfono fijo" />
+                </label>
+                <label>
+                    <span>&nbsp;</span>
+                    <button id="btnEnviar"  class="button">Enviar</button>
+                    <button type="button" class="button">Cancelar </button>
+                    <button type="reset" class="button">Restablecer </button>
+                </label>
+            </form>
+
+        </main>
+        <footer>
+            <!-- Pie de Página -->
+        </footer>
+    </body>
+    <script>
+        var btnEnviar = document.getElementById('btnEnviar');
+        var nombre, edad, telefono, dni;
+        btnEnviar.onclick = function(e) {
+          e.preventDefault();
+            nombre = document.getElementById('nombre').value;
+            apellidos = document.getElementById('apellidos').value;
+            edad = document.getElementById('edad').value;
+            dni = document.getElementById('dni').value;
+            telefono = document.getElementById('telefonoFijo').value;
+            try {
+                validarNombre(nombre);
+                validarApellidos(apellidos);
+                validarEdad(edad);
+                validarDNI(dni);
+                validarTelefono(telefono);
+                alert('Todo correcto');
+            } catch (e) {
+                alert(e.message);
+            }
+
+        };
+
+        function validarNombre(nombre) {
+            try {
+                cadenaVacia(nombre,'Nombre');
+                cadenaMinima(nombre, 'Nombre', 3);
+                cadenaMaxima(nombre, 'Nombre', 20);
+            } catch (e) {
+                throw e;
+            }
+        }
+        function validarApellidos(apellidos){
+          try{
+            cadenaVacia(apellidos,'Apellidos');
+            cadenaMinima(apellidos,'Apellidos',3);
+            cadenaMaxima(apellidos,'Apellidos',20);
+          }catch(e){
+            throw e;
+          }
+        }
+
+        function validarEdad(edad) {
+            try {
+                cadenaVacia(edad, 'Edad');
+                esNumero(edad,'Edad');
+                numeroMinimo(edad, 'Edad', 16);
+            } catch (e) {
+                throw e;
+            }
+        }
+
+        function validarDNI(dni) {
+            var numero;
+            var letra;
+            var letraCalculada;
+
+            /* Se comprueba que el dni sean u dígitos y una letraCalculada;*/
+            if (/^\d{8}[a-zA-Z]$/.test(dni)) {
+                numero = dni.substr(0, dni.length - 1);
+                letra = dni.substr(dni.length - 1, 1);
+                numero = numero % 23;
+                letraCalculada = 'TRWAGMYFPDXBNJZSQVHLCKET';
+                letraCalculada = letraCalculada.substring(numero, numero + 1);
+                if (letraCalculada !=  letra.toUpperCase()) {
+                    throw new Error('ERROR: DNI erróneo. La letra del NIF no se corresponde');
+                }
+            } else {
+                throw new Error('ERROR: DNI erróneo. Formato no válido');
+            }
+        }
+
+        function validarTelefono(telefono) {
+          cadenaVacia(telefono,'Telefono');
+          if( !/^\d{9}$/.test(telefono)){
+            throw new Error('ERROR: Formato del teléfono incorrecto');
+          }
+        }
+
+        function cadenaVacia(cadena, titulo) {
+            if (cadena === "") {
+                throw new Error('ERROR: Cadena ' + titulo + ' vacía');
+            }
+            return true;
+        }
+
+        function cadenaMinima(cadena, titulo, minimo) {
+            if (cadena.length < minimo) {
+                throw new Error('ERROR: Cadena ' + titulo + ' no tiene la longitud mínima ' + minimo);
+            }
+            return true;
+        }
+
+        function cadenaMaxima(cadena, titulo, maximo) {
+            if (cadena.length > maximo) {
+                throw new Error('ERROR: Cadena ' + titulo + ' supera la longitud máxima ' + maximo);
+            }
+            return true;
+        }
+
+        function esNumero(num,titulo) {
+            if (!isNaN(parseFloat(num)) && isFinite(num)) {
+                return true;
+            } else {
+                throw new Error('ERROR: ' + titulo + ' no es un número');
+            }
+        }
+
+        function numeroMinimo(num, titulo, minimo) {
+            if (num < minimo) {
+                throw new Error('ERROR: El número ' + titulo + ' debe ser como mínimo ' + minimo);
+            }
+        }
+    </script>
+
+</html>

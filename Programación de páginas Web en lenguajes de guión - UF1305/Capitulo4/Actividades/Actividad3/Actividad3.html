@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 3 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Construya una página Web en la cual a partir de un cuadro de texto se pueda calcular el cuadrado y mostrarlo por pantalla. En lugar de escribir adecuadamente la función Math.pow escríbela como Math.poww. Debes capturar el error utilizando try-catch. La
+                gestión del error será in- vocar la función Math.power de manera adecuada.
+            </p>
+        </header>
+        <main>
+            <input id="txtCuadrado" type="text" placeholder="Introduzca el valor a calcular">
+            <input id="btnCalcular" type="button" value="¡Calcular!">
+            <script>
+                var txtCuadrado = document.getElementById('txtCuadrado');
+                btnCalcular.onclick = function() {
+                    var valor = txtCuadrado.value;
+                    try {
+                        Math.poww(valor, 2);
+                    } catch (e) {
+                        console.log(e);
+                        alert('El Cuadrado de ' + valor + ' es ' + Math.pow(valor, 2));
+                    }
+                }
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

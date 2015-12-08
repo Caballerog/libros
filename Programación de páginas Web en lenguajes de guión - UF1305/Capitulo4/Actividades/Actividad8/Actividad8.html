@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Actividad 7</title>
+    </head>
+
+    <body>
+        <header>
+            <p>Actividad 8 - Construya una página Web con un elemento de entrada de datos que muestre los siguientes mensajes a través de gestión de errores:
+            </p>
+            <p>
+                <ul>
+                    <li>Número menor de 5: "El número es demasiado pequeño".</li>
+                    <li>Número mayor de 10: "El número es demasiado grande".</li>
+                    <li>Número entre 5-10: "El número es correcto".</li>
+                    <li>Si no es un número: "Debe introducir un número".</li>
+                </ul>
+            </p>
+        </header>
+        <main>
+            <script>
+              try{
+                validarNumero(parseFloat(prompt('Introduzca un número')));
+                alert('El número es correcto');
+              }catch(e){
+                alert(e.message);
+              }
+              function validarNumero(numero){
+                if(isNaN(numero)){
+                  throw new Error('Debe introducir un número');
+                }else if(numero < 5){
+                  throw new Error('El número es demasiado pequeño');
+                }else if(numero > 10){
+                  throw new Error('El número es demasiado grande');
+                }
+              }
+            </script>
+        </main>
+        <footer>
+            <!-- Pie de Página -->
+        </footer>
+    </body>
+</html>

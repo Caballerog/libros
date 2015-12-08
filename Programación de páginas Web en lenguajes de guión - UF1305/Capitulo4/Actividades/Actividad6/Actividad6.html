@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 6 </title>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Escriba un código con un array de 10 posiciones y un bucle que acceda a la posición 11.
+            </p>
+            <p>
+                Incorpore la gestión del error para que en caso de acceder a una posición fuera de rango de
+                 un array el programa no se interrumpa.</p>
+        </header>
+        <main>
+            <script>
+                var array = ['a','b','c','d','e','f','g','h','i','j'];
+                for(var i = 0; i<20;i++){
+                  try {
+                    document.write(' ' + mostrarPosicion(array,i));
+                  }catch (e) {
+                    document.write('<br>' + e.message );
+                  }
+                }
+                function mostrarPosicion(array,i){
+                  if(i<array.length){
+                    return array[i];
+                  }else{
+                    throw new Error('ERROR: Posición fuera de rango.');
+                  }
+                }
+
+            </script>
+
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+</html>
