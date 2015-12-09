@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title> Actividad 1 </title>
+        <link rel="stylesheet" href="css/actividad1.css">
+        <script src="js/actividad1.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Construye un formulario que pida el nombre, teléfono y edad y muestre los datos en una nueva ventana.
+            </p>
+        </header>
+        <main>
+            <form action="" method="post" class="basic-grey">
+                <h1>Formulario de contacto
+                    <span>Rellena todos los elementos del formulario.</span>
+                </h1>
+                <label>
+                    <span>Nombre:</span>
+                    <input id="nombre" type="text" name="nombre" placeholder="Introduzca su nombre" />
+                </label>
+                <label>
+                    <span>Teléfono Fijo:</span>
+                    <input id="telefonoFijo" type="tel" name="telefonoFijo" placeholder="Introduzca su teléfono fijo" />
+                </label>
+
+
+                <label>
+                    <span>Edad:</span>
+                    <input id="edad" type="text" name="edad" placeholder="Introduzca su edad" />
+                </label>
+                <label>
+                    <span>&nbsp;</span>
+                    <button id="btnEnviar" class="button">Enviar</button>
+                    <button type="button" class="button">Cancelar </button>
+                    <button type="reset" class="button">Restablecer </button>
+                </label>
+            </form>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    <script>
+        document.getElementById('btnEnviar').onclick = function(e) {
+            e.preventDefault();
+            var refVentana;
+            var edad = document.getElementById('edad').value;
+            var nombre = document.getElementById('nombre').value;
+            var telefono = document.getElementById('telefonoFijo').value;
+            try {
+                validarNombre(nombre);
+                validarEdad(edad);
+                validarTelefono(telefono);
+
+                refVentana = open('', 'Mi ventana', 'width=200,height=100');
+                refVentana.document.write("<p>Nombre: " + nombre + "</p>");
+                refVentana.document.write("<p>Edad: " + edad + "</p>");
+                refVentana.document.write("<p>Teléfono: " + telefono + "</p>");
+
+            } catch (e) {
+                alert(e.message);
+            }
+        }
+    </script>
+
+</html>
