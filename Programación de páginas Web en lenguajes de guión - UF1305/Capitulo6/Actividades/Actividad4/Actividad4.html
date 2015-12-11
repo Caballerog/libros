@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Actividad 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        #divContenido {
+            position: absolute;
+            width: 30em;
+            height: 20em;
+            border: 1px solid #000;
+        }
+
+        #divImg {
+            position: absolute;
+            top: 18%;
+            left: 30%;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #divBotones {
+            position: absolute;
+            top: 80%;
+            left: 20%;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #imgVisor {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+
+    <body>
+        <header>
+            <p>
+                Se va a desarrollar un visor de imágenes. La página Web dispondrá de una imagen central y un conjunto de botones inferiores con las siguien tes funcionalidades:
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        <strong>Siguiente.</strong> Al pulsar en dicho botón se visualiza la siguiente imagen.
+                    </li>
+                    <li>
+                        <strong>Anterior.</strong> Al pulsar en dicho botón se visualiza la anterior imagen.
+                    </li>
+                    <li>
+                        <strong>Último.</strong> Al pulsar en dicho botón se visualiza la última imagen.
+                    </li>
+                    <li>
+                        <strong>Primero.</strong> Al pulsar en dicho botón se visualiza la primera imagen.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Los botones anterior y siguiente estarán desactivados al llegar al primero y al último respectivamente. Es conveniente que uses un array en el que estén almacenadas las imágenes.
+            </p>
+        </header>
+        <main>
+            <h1>Visor de imágenes</h1>
+            <div id="divContenido">
+                <div id="divImg">
+                    <img id="imgVisor" src="#">
+                </div>
+                <div id="divBotones">
+                    <input type="button" id="butPrimero" value="Primero">
+                    <input type="button" id="butAnterior" value="Anterior">
+                    <input type="button" id="butSiguiente" value="Siguiente">
+                    <input type="button" id="butUltimo" value="Ultimo">
+                </div>
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    <script>
+        var aImg = ["img/js.png",
+            "img/php.png",
+            "img/HTML5.png",
+            "img/css3.png"
+        ];
+        window.onload = function() {
+            var imgVisor = window.document.getElementById("imgVisor");
+            var butPrimero = window.document.getElementById("butPrimero");
+            var butAnterior = window.document.getElementById("butAnterior");
+            var butSiguiente = window.document.getElementById("butSiguiente");
+            var butUltimo = window.document.getElementById("butUltimo");
+            var aLenght = aImg.length - 1;
+
+            var imgAct = 0;
+            imgVisor.src = aImg[imgAct];
+            butAnterior.setAttribute("disabled", "disabled");
+            butPrimero.setAttribute("disabled","disabled");
+            butPrimero.onclick = function() {
+                imgAct = 0;
+                imgVisor.src = aImg[imgAct];
+                butAnterior.setAttribute("disabled", "disabled");
+                butPrimero.setAttribute("disabled","disabled");
+                butSiguiente.removeAttribute("disabled");
+                butUltimo.removeAttribute("disabled");
+            };
+            butAnterior.onclick = function() {
+                imgAct = imgAct - 1;
+                imgVisor.src = aImg[imgAct];
+                if (imgAct < aLenght){
+                    butSiguiente.removeAttribute("disabled");
+                    butUltimo.removeAttribute("disabled");
+                  }
+                if (imgAct == 0){
+                    butAnterior.setAttribute("disabled", "disabled");
+                    butPrimero.setAttribute("disabled","disabled");
+                }
+            };
+            butSiguiente.onclick = function() {
+                imgAct = imgAct + 1;
+                imgVisor.src = aImg[imgAct];
+                if (imgAct > 0){
+                    butAnterior.removeAttribute("disabled");
+                    butPrimero.removeAttribute("disabled");
+                }
+                if (imgAct == aLenght){
+                    butSiguiente.setAttribute("disabled", "disabled");
+                    butUltimo.setAttribute("disabled","disabled");
+                }
+            };
+            butUltimo.onclick = function() {
+                imgAct = aLenght;
+                imgVisor.src = aImg[imgAct];
+                butSiguiente.setAttribute("disabled", "disabled");
+                butUltimo.setAttribute("disabled","disabled");
+                butAnterior.removeAttribute("disabled");
+            };
+        };
+    </script>
+
+</html>

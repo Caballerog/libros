@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Actividad 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .divContenido {
+                width: 33%;
+                height: 600px;
+                border: 1px solid #000;
+                float: left;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Crea una página con tres divs. Al pasar el ratón sobre cada uno de ellos se debe mostrar, en el div sobre el que se encuentre, las coordenadas del puntero del ratón respecto a dicho elemento.
+            </p>
+            <p>
+                Se utilizará la misma función para controlar los tres divs. Cuando el ratón salga de cualquiera de los divs se dejará de mostrar la información de las coordenadas.
+            </p>
+        </header>
+        <main>
+
+
+            <div id="div1" class="divContenido"></div>
+            <div id="div2" class="divContenido"></div>
+            <div id="div3" class="divContenido"></div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            window.document.onmousemove = getCoordenadas;
+            var coordX = 0;
+            var coordY = 0;
+            var div1 = document.getElementById("div1");
+            var div2 = document.getElementById("div2");
+            var div3 = document.getElementById("div3");
+
+            function getCoordenadas(e) {
+                coordX = e.pageX;
+                coordY = e.pageY;
+                if (coordX < 0) {
+                    coordX = 0;
+                }
+                if (coordY < 0) {
+                    coordY = 0;
+                }
+                var elementMouseIsOver = document.elementFromPoint(coordX, coordY);
+                if (elementMouseIsOver.id === "div1") {
+                    div1.innerHTML = coordX + " " + coordY;
+                    div2.innerHTML = "";
+                    div3.innerHTML = "";
+                } else if (elementMouseIsOver.id === "div2") {
+                    div1.innerHTML = "";
+                    div2.innerHTML = coordX + " " + coordY;
+                    div3.innerHTML = "";
+                } else if (elementMouseIsOver.id === "div3") {
+                    div1.innerHTML = "";
+                    div2.innerHTML = "";
+                    div3.innerHTML = coordX + " " + coordY;
+                } else {
+                    div1.innerHTML = "";
+                    div2.innerHTML = "";
+                    div3.innerHTML = "";
+                }
+            }
+        </script>
+    </body>
+
+</html>

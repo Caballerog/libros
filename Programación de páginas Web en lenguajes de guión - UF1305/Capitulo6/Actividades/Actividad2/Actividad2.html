@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Actividad 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Crea una página con tres
+                <em>a</em> con sus correspondientes href y un
+                <em>div</em>.
+            </p>
+            <p>
+                Al pulsar sobre cada enlace se mostrará un texto en el div. Se debe cancelar el comportamiento por defecto de los tres enlaces.
+            </p>
+        </header>
+        <main>
+            <a href="#">Enlace 1</a>
+            <a href="#">Enlace 2</a>
+            <a href="#">Enlace 3</a>
+
+            <div id="divResultado"></div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    <script>
+        window.onload = function() {
+            'use strict';
+            var elementosA = document.getElementsByTagName('a');
+            var divResultado = document.getElementById('divResultado');
+            //var i = 0;
+            var elementosALen = elementosA.length;
+            for (let i = 0; i < elementosALen; i++) {
+                elementosA[i].onclick = function(e) {
+                    e.preventDefault();
+                    divResultado.innerHTML = 'Este es el texto del enlace ' + (i + 1);
+                }
+            }
+        }
+    </script>
+</html>

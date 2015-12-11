@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Actividad 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <p>
+                Crear un botón de ayuda que al pulsarlo mostrará un cuadro (div) de ayuda con texto y un botón que tendrá la funcionalidad de cerrar ayuda.
+            </p>
+            <p>
+                El cuadro de ayuda y botón serán cargados inicialmente pero serán invisibles (propiedad visibility).
+            </p>
+            <p>
+                El cuadro se mostrará al pulsar el botón ayuda y se ocultará cuando se pulse el botón cerrar ayuda.
+            </p>
+        </header>
+        <main>
+            <h3>Introduzca sus datos</h3>
+            <form id="datosForm" class="form-content">
+                <table>
+                    <tr>
+                        <td>
+                            <label>Nombre:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtNombre" class="txtContenido">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Apellidos:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtApellidos" class="txtContenido">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Domicilio:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="txtDomicilio" class="txtContenido">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <input type="radio" name="rdaSexo" value="Hombre"> Hombre
+                <input type="radio" name="rdaSexo" value="Mujer"> Mujer
+                <br>
+                <input type="button" id="butEnviar" value="Enviar">
+                <input type="button" id="butBorrar" value="Borrar">
+                <input type="button" id="butAyuda" value="Ayuda">
+                <div id="divAyuda" style="visibility: hidden">Aquí se escribe la ayuda de uso del formulario.
+                    <br>
+                    <input type="button" id="butCerrarAyuda" value="Cerrar ayuda">
+                </div>
+            </form>
+            <div id="divDatos"></div>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    <script>
+        window.onload = function() {
+            var butBorrar = window.document.getElementById("butBorrar");
+            butBorrar.onclick = function() {
+                var texto = window.document.querySelectorAll(".txtContenido");
+                for (var i = 0; i < texto.length; i++) {
+                    texto[i].value = "";
+                }
+                var rdaSexo = window.document.getElementsByName("rdaSexo");
+                for (var i = 0; i < rdaSexo.length; i++) {
+                    rdaSexo[i].checked = false;
+                }
+            };
+        };
+        var butAyuda = window.document.getElementById("butAyuda");
+        var divAyuda = window.document.getElementById("divAyuda");
+        butAyuda.onclick = function() {
+            divAyuda.style.visibility = "visible";
+            window.document.getElementById("butCerrarAyuda").addEventListener("click", cierraAyuda, false);
+        };
+
+        function cierraAyuda() {
+            divAyuda.style.visibility = "hidden";
+        }
+    </script>
+
+</html>

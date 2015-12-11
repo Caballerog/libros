@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Actividad 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        td {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+
+    <body>
+        <header>
+            <p>
+                Mostrar una tabla de dos filas y tres columnas con imágenes en cada celda.
+            </p>
+            <p>
+                Las imágenes de cada celda de la fila de arriba irán cambiando entre dos posibles, cada tres segundos.
+            </p>
+            <p>
+                La imagen de las celdas de la fila de abajo cambian al pasar el puntero del ratón por encima de la celda y vuelve a la imagen original al salir, esto se realiza para cada una de las tres celdas.
+            </p>
+            <p>
+                Al pulsar una tecla aparecerá una alerta ("Programa detenido al pulsar una tecla") y se detendrá el movimiento hasta pulsar "Aceptar".
+            </p>
+        </header>
+        <main>
+            <div>
+                <table>
+                    <tr>
+                        <td id="1">
+                            <img id="img1" src="#">
+                        </td>
+                        <td id="2">
+                            <img id="img2" src="#">
+                        </td>
+                        <td id="3">
+                            <img id="img3" src="#">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="4">
+                            <img id="img4" src="#">
+                        </td>
+                        <td id="5">
+                            <img id="img5" src="#">
+                        </td>
+                        <td id="6">
+                            <img id="img6" src="#">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    <script>
+        var aImg1 = ["img/HTML5.png", "img/css3.png"];
+        var aImg2 = ["img/angularjs.png", "img/node.png"];
+        var aImg3 = ["img/js.png", "img/php.png"];
+        var img1 = window.document.getElementById("img1");
+        var img2 = window.document.getElementById("img2");
+        var img3 = window.document.getElementById("img3");
+        var img4 = window.document.getElementById("img4");
+        var img5 = window.document.getElementById("img5");
+        var img6 = window.document.getElementById("img6");
+        var x = 0;
+        window.onload = function() {
+            img1.src = aImg1[0];
+            img2.src = aImg2[0];
+            img3.src = aImg3[0];
+            img4.src = aImg1[1];
+            img5.src = aImg2[1];
+            img6.src = aImg3[1];
+
+            setInterval(siguienteImagen, 3000);
+        };
+
+        window.onkeypress = function() {
+            alert("Programa detenido al pulsar una tecla. (Aceptar para continuar)");
+        };
+
+        function siguienteImagen() {
+            x = (x === aImg1.length - 1) ? 0 : x + 1;
+            img1.src = aImg1[x];
+            img2.src = aImg2[x];
+            img3.src = aImg3[x];
+        }
+
+        img4.onmouseover = function() {
+            img4.src = aImg1[0];
+        };
+        img4.onmouseout = function() {
+            img4.src = aImg1[1];
+        };
+        img5.onmouseover = function() {
+            img5.src = aImg2[0];
+        };
+        img5.onmouseout = function() {
+            img5.src = aImg2[1];
+        };
+        img6.onmouseover = function() {
+            img6.src = aImg3[0];
+        };
+        img6.onmouseout = function() {
+            img6.src = aImg3[1];
+        };
+    </script>
+
+</html>
