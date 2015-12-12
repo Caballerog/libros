@@ -1,0 +1,6 @@
+- filetype:pdf ordinogramas.
+- filetype:word eventos javascript
+- filetype:pdf "ejercicios"+"eventos"+"javascript" 2013..2015
+- intitle:"ordinograma"
+- intext:"~ejercicios de JavaScript" filetype:word
+- intext:"~ejercicios de JavaScript" -eventos 2008..2010

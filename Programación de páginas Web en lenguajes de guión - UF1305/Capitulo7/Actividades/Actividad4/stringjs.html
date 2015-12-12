@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>string.js example</title>
+        <script src="libs/string.min.js"></script>
+    </head>
+
+    <body>
+        <main>
+            <ul id="results"></ul>
+        </main>
+
+    </body>
+    <script>
+        var results = document.getElementById('results')
+        write("S('data_rate').camelize()")
+        write("S('joe').capitalize()");
+        write("S('camelCase').dasherize().s;")
+        write("S('foo bar baz').endsWith('baz')")
+        write("S('foo bar baz').startsWith('foo')")
+        write("S('foo bar baz').contains('bar')")
+        write("S('foo bar baz').left(3)")
+
+        function write(func) {
+            results.innerHTML += '<li>' + func + '<br />=><b>' + eval(func) + '</b><br /><br />';
+        }
+    </script>
+
+</html>
