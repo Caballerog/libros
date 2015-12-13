@@ -2,14 +2,13 @@ function openWindow(){
   var myWindow = window.open("","","width=150, height=150");
   myWindow.moveTo(Math.random() * 700,Math.random() * 700);
   resizeWindow(myWindow);
-};
+}
 
 function resizeWindow(_window){
   var size = 150;
   var asd = setInterval(function(){
     console.log(_window.innerWidth);
     if(_window.innerWidth > 350){
-      console.log("enddd");
       clearInterval(asd);
       terremoto(_window);
     }
@@ -19,7 +18,6 @@ function resizeWindow(_window){
 }
 
 function terremoto(_window){
-  console.log("terremoto");
   var x = Math.random() * 1000;
   var y = Math.random() * 1000;
 
