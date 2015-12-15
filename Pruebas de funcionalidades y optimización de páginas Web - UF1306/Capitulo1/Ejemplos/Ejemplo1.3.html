@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Ejemplo</title>
+</head>
+<body>
+   <button id="elemento">Busca</button>
+   <p id="resultado"></p>
+   <script>
+      function click() {
+         var str = "Devuelve todas las apariciones en las que aparece la cadena as";
+         var res = str.match(/as/g);
+         document.getElementById("resultado").innerHTML = res;
+      }
+     window.document.getElementById('elemento').addEventListener('click',click,false);
+   </script>
+</body>
+</html>

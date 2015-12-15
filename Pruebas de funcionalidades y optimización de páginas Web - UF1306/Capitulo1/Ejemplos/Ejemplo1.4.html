@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Ejemplo</title>
+</head>
+<body>
+   <p id="elemento">El caballo blanco de Santiago es de color blanco.</p>
+   <button id="boton">¡Reemplaza!</button>
+   <script>
+      function click() {
+         var str = document.getElementById("elemento").innerHTML;
+         var res = str.replace(/blanco/g, "gris");
+         document.getElementById("elemento").innerHTML = res;
+      }
+      document.getElementById('boton').addEventListener('click',click,false);
+   </script>
+</body>
+</html>
