@@ -1,0 +1,2 @@
+- Código fuente, ejemplo y explicación del uso de subtítulos en vídeos.
+ - https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video

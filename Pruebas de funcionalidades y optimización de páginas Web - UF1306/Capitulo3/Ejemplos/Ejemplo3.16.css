@@ -1,0 +1,7 @@
+.ejemplo:after {
+  content: "Fin Ejemplo";
+}
+p:before {
+  content: counter(paragraph) ". ";
+  counter-increment: paragraph;
+}

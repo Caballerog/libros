@@ -1,0 +1,7 @@
+- Las principales ventajas de utilizar estándar:
+ - Los sitios Web son reconocidos por todos los navegadores del mercado.
+ - El contenido de los sitios es accesible para personas con discapacidades.
+ - Se puede visualizar correctamente un sitio a través de multi-dispositivos (teléfonos, ordenadores portátiles, sistemas de televisión interactiva, etc).
+ - Se mejora el posicionamiento en los motores de búsqueda.
+ - Se reduce el tiempo de carga de la página puesto que se eliminan fragmentos de código innecesario.
+ - El desarrollo y el mantenimiento del sitio se simplifica, ya que el aspecto visual está separado del contenido (CSS).

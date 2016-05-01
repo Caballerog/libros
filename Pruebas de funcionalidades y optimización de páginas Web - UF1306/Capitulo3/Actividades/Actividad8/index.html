@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if lt IE 9]>
+                <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+        <title>Responsive Design</title>
+        <style>
+            div {
+                min-height: 00px;
+                color: #555;
+                font-family: arial
+            }
+
+            #container {
+                width: 100%;
+                background-color: #eee;
+                margin: auto;
+                min-height: 510px;
+                border: black solid 1px;
+            }
+
+            #divCabecera {
+                width: 100%;
+                float: left;
+                background-color: #E5DFD6;
+                font-size: 3em;
+            }
+
+            #divSeccion {
+                width: 70%;
+                float: right;
+                background-color: #6699cc;
+            }
+
+            .sideBar {
+                width: 30%;
+                background-color: #888;
+                float: left
+            }
+            /*
+                Estilos para pantallas entre 700 y 1000 pixels;
+            */
+
+            @media screen and (min-width: 480px) and (max-width: 1000px) {
+                #container {
+                    width: 100%;
+                    background-color: #cccccc;
+                }
+                #divCabecera {
+                    width: 100%;
+                    background-color: #ddd;
+                    font-size: 2em;
+                    color: blue;
+                    min-height: 100px;
+                    text-align: center
+                }
+                #divSeccion {
+                    width: 70%;
+                    background-color: #6699cc;
+                }
+                .sideBar {
+                    width: 30%;
+                    background-color: #888;
+                    float: left
+                }
+            }
+            /*
+                Estilos para pantallas entre 0 y 300 pixels;
+            */
+
+            @media screen and (min-width: 0px) and (max-width: 480px) {
+                #container {
+                    width: 100%;
+                    background-color: #cccccc;
+                }
+                #divCabecera {
+                    width: 100%;
+                    background-color: #E5DFD6;
+                    font-size: 2em;
+                    color: blue;
+                    min-height: 100px;
+                }
+                #divSeccion {
+                    width: 100%;
+                    background-color: #6699cc;
+                }
+                ul {
+                    float: left;
+                    padding: 0;
+                    width: 100%
+                }
+                li {
+                    width: 23%;
+                    float: left;
+                    background-color: #ddd;
+                    list-style: none;
+                    margin: 2px;
+                }
+                .sideBar {
+                    width: 100%;
+                    background-color: #888;
+                    float: left;
+                    min-height: 70px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="container">
+
+            <div id="divCabecera">
+                Cabecera
+            </div>
+
+
+            <div class="sideBar">
+                <ul>
+                    <li>
+                        Opcion 1
+                    </li>
+                    <li>
+                        Opcion 2
+                    </li>
+                    <li>
+                        Opcion 3
+                    </li>
+                    <li>
+                        Opcion 4
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="divSeccion">
+                <img src="img.jpg" style="max-width: 100%">
+            </div>
+        </div>
+    </body>
+</html>

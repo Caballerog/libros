@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Ejercicio de depuración 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>Observe la consola</div>
+        <input type="text" id="txtTexto"/>
+        <input type="button" id="butEnvia" value="Enviar">
+        <div id="resultado"></div>
+    </body>
+    <script>
+
+
+        //Se modifica getElementByid por getElementById
+        //Los parámetros son modificados a cadenas de texto
+        var texto = document.getElementById('txtTexto');
+        var boton = document.getElementById('butEnvia');
+        //El evento se asocia con cadena de caracteres
+        boton.addEventListener('click', giraLetras, false);
+
+        function giraLetras() {
+            //Se introduce un comentario como log
+            console.log('Se ejecuta la función giraLetras');
+            //Se cambia texto por el div resultado donde se mostrará la frase girada
+            document.getElementById('resultado').innerHTML = texto.value.split('').reverse().join('');
+        }
+    </script>
+
+</html>

@@ -1,0 +1,2 @@
+- En la consola teclear:
+ - window.document.getElementById('hplogo').style.background="url('https://s.yimg.com/rz/l/yahoo_en-US_f_p_142x37.png') no-repeat";
