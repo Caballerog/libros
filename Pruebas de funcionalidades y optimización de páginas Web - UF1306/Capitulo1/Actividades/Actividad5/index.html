@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Formulario de contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Ejemplo5.css" />
+        <script src="actividad5.2.js"></script>
+    </head>
+
+    <body>
+        <div id="divFormulario">
+            <form>
+                <fieldset>
+                    <legend>Formulario de validación de un contacto</legend>
+                    <div id="divNombre">
+                        <label for="nombre">Nombre/Nick:</label>
+                        <br/>
+                        <input autofocus type="text" id="txtNombre" name="nombre" placeholder="Nombre (4-50)">
+                    </div>
+                    <div id="divEmail">
+                        <label for="email">Email:</label>
+                        <br/>
+                        <input type="text" id="txtEmail" name="email">
+                    </div>
+
+
+                    <div id="divObservaciones">
+                        <div>
+                            <label for="observaciones">Observaciones:</label>
+                            <textarea type="text"
+                                      id="txtObservaciones"
+                                      name="observaciones"
+                                      placeholder="Observaciones"></textarea>
+                        </div>
+
+                    </div>
+
+                    <input type="button" id="butValidar" value="Validar">
+                </fieldset>
+            </form>
+        </div>
+        <div id="divValidar" class="divValidar">
+            <div id="divValNombre">Nombre:</div>
+            <div id="divValEmail">Email:</div>
+            <div id="divValObservaciones">Observaciones: </div>
+        </div>
+    </body>
+    <script src="actividad5.1.js"></script>
+
+</html>

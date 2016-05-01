@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Validación Clinica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Ejemplo4.css" />
+        <script src="actividad4.2.js"></script>
+    </head>
+
+    <body>
+        <div id="divFormulario">
+            <form>
+                <fieldset>
+                    <legend>Formulario de validación de una clínica</legend>
+                    <div id="divNombre">
+                        <label for="nombre">Nombre del paciente:</label>
+                        <br/>
+                        <input autofocus type="text" id="txtNombre" name="nombre" placeholder="Nombre (2-100)">
+                    </div>
+                    <div id="divDNI">
+                        <label for="DNI">DNI del paciente:</label>
+                        <br/>
+                        <input autofocus type="text" id="txtDNI" name="DNI" placeholder="8 dígitos + Letra">
+                    </div>
+                    <div id="divNumeroTarjeta">
+                        <label for="numeroTarjeta">Número de la tarjeta sanitaria:</label>
+                        <br/>
+                        <input autofocus type="text" id="txtNumeroTarjeta" name="NumeroTarjeta" placeholder="A2l/12345678/AA">
+                    </div>
+                    <div id="divSelCompania">
+                        <label for="compania">Compañía medica:</label>
+                        <br/>
+                        <select id="selCompania" name="compania">
+                            <option value="Selecciona...">Selecciona...</option>
+                            <option value="Adesla">Adesla</option>
+                            <option value="DKV">DKV</option>
+                            <option value="Sanitas">Sanitas</option>
+                            <option value="Seguridad">Seguridad Social</option>
+                        </select>
+                    </div>
+                    <div id="divTlfF">
+                        <label for="telefonoFijo">Teléfono Fijo:</label>
+                        <br/>
+                        <input type="text" id="txtTelefonoFijo" name="telefonoFijo" placeholder="Telefono Fijo">
+                    </div>
+                    <div id="divTlfM">
+                        <label for="telefonoMovil">Teléfono Móvil:</label>
+                        <br/>
+                        <input type="text" id="txtTelefonoMovil" name="telefonoMovil" placeholder="Telefono Móvil">
+                    </div>
+                    <fieldset style="width:90%">
+                        <legend>Dirección</legend>
+                        <div id="divSelTipoVia">
+                            <label for="via">Tipo de vía:</label>
+                            <br/>
+                            <select id="selTipoVia" name="tipoVia">
+                                <option value="Selecciona...">Selecciona...</option>
+                                <option value="Calle">Calle</option>
+                                <option value="Vía">Vía</option>
+                                <option value="Avenida">Avenida</option>
+                            </select>
+                        </div>
+                        <div id="divNombreCalle">
+                            <label for="nombreCalle">Nombre de la calle:</label>
+                            <br/>
+                            <input autofocus type="text" id="txtNombreCalle" name="nombreCalle" placeholder="Nombre Calle (2-100)">
+                        </div>
+
+                        <div id="divNumeroCalle">
+                            <label for="numeroCalle">Número de la calle:</label>
+                            <br/>
+                            <input autofocus type="text" id="txtNumeroCalle" name="numeroCalle" placeholder="Numero Calle">
+                        </div>
+
+                    </fieldset>
+
+
+                    <div id="divObservaciones">
+                        <div>
+                            <label for="observaciones">Observaciones:</label>
+                            <textarea type="text"
+                                      id="txtObservaciones"
+                                      name="observaciones"
+                                      placeholder="Observaciones">
+                            </textarea>
+                        </div>
+
+                    </div>
+
+                    <input type="button" id="butValidar" value="Validar">
+                </fieldset>
+            </form>
+        </div>
+        <div id="divValidar" class="divValidar">
+            <div id="divValNombre">Nombre:</div>
+            <div id="divValDNI">DNI:</div>
+            <div id="divValNumeroTarjeta">Numero tarjeta: </div>
+            <div id="divValSelCompania">Compañía de seguro:</div>
+            <div id="divValTlfF">Teléfono Fijo:</div>
+            <div id="divValTlfM">Teléfono Movil:</div>
+            <div id="divValSelTipoVia">Tipo de vía:</div>
+            <div id="divValNombreCalle">Nombre de la calle:</div>
+            <div id="divValNumeroCalle">Número de calle: </div>
+
+        </div>
+    </body>
+    <script src="actividad4.1.js"></script>
+
+</html>
