@@ -1,0 +1,3 @@
+matrix (1, 0, 0, 1, x, y) equivale a translate x e y
+matrix (x, 0, 0, y, 0, 0) equivale a scale x e y
+matrix (1, y, x, 1, 0, 0) equivale a skew x e y

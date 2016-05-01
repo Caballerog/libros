@@ -1,0 +1,12 @@
+/* Parámetro estándar */
+@keyframes [Nombre del keyframes] {}
+
+/* Parámetros según navegador */
+@-webkit-keyframes [Nombre del keyfremes] {}/* Chrome y Safari */
+@-moz-keyframes [Nombre del keyfremes] {}/* Mozilla */
+
+/* Ejemplo de un keyframes */
+@keyframes Ejemplo {
+0 %{width:100px}
+100 %{width:200px}
+}

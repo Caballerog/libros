@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo</title>
+    </head>
+
+    <body>
+        <iframe src="iframe.html" frameborder="1"></iframe>
+        <script>
+            window.opener.popupAbierto(window);
+
+            function usuarioAccion() {
+                window.opener.popupCerrado();
+                window.close();
+            }
+        </script>
+    </body>
+
+</html>

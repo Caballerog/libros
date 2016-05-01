@@ -1,0 +1,9 @@
+/* Primer bloque */
+transform: perspective(300px) rotateY(-180deg);
+transform-origin: 50% 50%;
+/* Segundo bloque */
+transform: perspective(300px) rotateY(-180deg translationX(100 %);
+transform-origin: 100% 50%;
+/* Tercer bloque */
+transform: perspective(300px) rotateY(-180deg);
+transform-origin: 100% 50%;

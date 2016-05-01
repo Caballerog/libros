@@ -1,0 +1,3 @@
+-moz-transform: function(parámetros); // en Mozilla
+-webkit-transform: function(parámetros); // en Safari y Chrome
+-o-transform: function(parámetros); // en Opera

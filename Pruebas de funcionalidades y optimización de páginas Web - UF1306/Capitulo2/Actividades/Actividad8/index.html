@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Actividad 8</title>
+		<style>
+			<style type="text/css">
+			/*************** ANIMATIONS ***************/
+
+			@-webkit-keyframes cube-spin {
+				from {
+					-webkit-transform: rotateY(0);
+				}
+				to {
+					-webkit-transform: rotateY(360deg);
+				}
+			}
+
+			@-ms-keyframes cube-spin {
+				from {
+					ms-transform: rotateY(0);
+				}
+				to {
+					ms-transform: rotateY(360deg);
+				}
+			}
+
+			@keyframes cube-spin {
+				from {
+					transform: rotateY(0);
+				}
+				to {
+					transform: rotateY(360deg);
+				}
+			}
+
+
+			/*************** STANDARD CUBE ***************/
+
+			.cube-wrap {
+				-webkit-perspective: 800px;
+				-webkit-perspective-origin: 50% 100px;
+				-moz-perspective: 800px;
+				-moz-perspective-origin: 50% 100px;
+				-ms-perspective: 800px;
+				-ms-perspective-origin: 50% 100px;
+				perspective: 800px;
+				perspective-origin: 50% 100px;
+			}
+
+			.cube {
+				position: relative;
+				width: 200px;
+				margin: 0 auto;
+				-webkit-transform-style: preserve-3d;
+				-webkit-animation: cube-spin 5s infinite linear;
+				-moz-transform-style: preserve-3d;
+				-moz-animation: cube-spin 5s infinite linear;
+				-ms-transform-style: preserve-3d;
+				-ms-animation: cube-spin 5s infinite linear;
+				transform-style: preserve-3d;
+				animation: cube-spin 5s infinite linear;
+			}
+
+			.cube div {
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background: rgba(255, 255, 255, 0.1);
+				box-shadow: inset 0 0 30px rgba(125, 125, 125, 0.8);
+				font-size: 20px;
+				text-align: center;
+				line-height: 200px;
+				color: rgba(0, 0, 0, 0.5);
+				font-family: sans-serif;
+				text-transform: uppercase;
+			}
+			/*************** DEPTH CUBE ***************/
+
+			.depth div.back-pane {
+				-webkit-transform: translateZ(-100px) rotateY(180deg);
+				-moz-transform: translateZ(-100px) rotateY(180deg);
+				-ms-transform: translateZ(-100px) rotateY(180deg);
+				transform: translateZ(-100px) rotateY(180deg);
+			}
+
+			.depth div.right-pane {
+				-webkit-transform: rotateY(-270deg) translateX(100px);
+				-webkit-transform-origin: top right;
+				-moz-transform: rotateY(-270deg) translateX(100px);
+				-moz-transform-origin: top right;
+				-ms-transform: rotateY(-270deg) translateX(100px);
+				-ms-transform-origin: top right;
+				transform: rotateY(-270deg) translateX(100px);
+				transform-origin: top right;
+			}
+
+			.depth div.left-pane {
+				-webkit-transform: rotateY(270deg) translateX(-100px);
+				-webkit-transform-origin: center left;
+				-moz-transform: rotateY(270deg) translateX(-100px);
+				-moz-transform-origin: center left;
+				-ms-transform: rotateY(270deg) translateX(-100px);
+				-ms-transform-origin: center left;
+				transform: rotateY(270deg) translateX(-100px);
+				transform-origin: center left;
+			}
+
+			.depth div.top-pane {
+				-webkit-transform: rotateX(-90deg) translateY(-100px);
+				-webkit-transform-origin: top center;
+				-moz-transform: rotateX(-90deg) translateY(-100px);
+				-moz-transform-origin: top center;
+				-ms-transform: rotateX(-90deg) translateY(-100px);
+				-ms-transform-origin: top center;
+				transform: rotateX(-90deg) translateY(-100px);
+				transform-origin: top center;
+			}
+
+			.depth div.bottom-pane {
+				-webkit-transform: rotateX(90deg) translateY(100px);
+				-webkit-transform-origin: bottom center;
+				-moz-transform: rotateX(90deg) translateY(100px);
+				-moz-transform-origin: bottom center;
+				-ms-transform: rotateX(90deg) translateY(100px);
+				-ms-transform-origin: bottom center;
+				transform: rotateX(90deg) translateY(100px);
+				transform-origin: bottom center;
+			}
+
+			.depth div.front-pane {
+				-webkit-transform: translateZ(100px);
+				-moz-transform: translateZ(100px);
+				-ms-transform: translateZ(100px);
+				transform: translateZ(100px);
+			}
+
+		</style>
+		</style>
+	</head>
+
+	<body>
+		<header>
+
+		</header>
+		<main>
+
+
+			<div style="height: 300px;margin-top:40px;">
+				<div class="cube-wrap">
+					<div class="cube depth">
+						<div class="front-pane">front</div>
+						<div class="back-pane">back</div>
+						<div class="top-pane">top</div>
+						<div class="bottom-pane">bottom</div>
+						<div class="left-pane"><img src="data:image/gif;base64,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"></div>
+						<div class="right-pane">right</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+
+</html>

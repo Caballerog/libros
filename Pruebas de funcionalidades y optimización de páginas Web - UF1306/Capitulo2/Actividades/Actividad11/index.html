@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Actividad 11</title>
+		<style type="text/css">
+			body {
+				background: #f2f2f2;
+			}
+
+			div {
+				background: #4A88F4;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+		<link rel="stylesheet" href="animate.css">
+	</head>
+
+	<body>
+		<header>
+		</header>
+		<main>
+			<input type="button" id="accion" value="Ver efecto">
+			<div id="elemento">
+			</div>
+		</main>
+	</body>
+	<script>
+		var contador = 1;
+
+		function cambiarClase() {
+			if (contador == 1) {
+				document.getElementById('elemento').className = 'animated bounceInUp';
+				contador = 2;
+			} else {
+				document.getElementById('elemento').className = '';
+				contador = 1;
+			}
+		}
+
+		document.getElementById('accion').onclick = cambiarClase;
+	</script>
+
+</html>

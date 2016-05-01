@@ -1,0 +1,22 @@
+animated_div{
+   background:#E11E52;
+   border-radius: 5px 5px 5px 5px;
+   color: #FFFFFF;
+   font-size: 15px;
+   font-weight: bold;
+   height: 120px;
+   margin: 5px;
+   opacity: 0.4;
+   padding: 10px;
+   transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+   transition-property: width, height, transform, background, opacity;
+   width: 120px;
+}
+.animated_div:hover {
+   background:red;
+   font-size: 30px;
+   height: 110px;
+   opacity: 1;
+   transform: rotate(360deg);
+   width: 170px;
+}

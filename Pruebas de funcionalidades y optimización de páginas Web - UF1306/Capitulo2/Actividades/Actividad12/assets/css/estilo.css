@@ -1,0 +1,74 @@
+body {
+    background: rgba(0, 0, 0, 0) url("../images/corcho.jpg") repeat scroll 0 0;
+    color: #444;
+    font-family: "Droid Sans",serif;
+    font-size: 1.6em;
+}
+.ad_container {
+    float: right;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.container {
+    height: auto;
+    margin: 30px auto;
+    min-height: 400px;
+    padding: 25px;
+    width: 90%;
+}
+a {
+    text-decoration: none;
+}
+.polaroid-images {
+    float: left;
+    margin: 10px 0;
+}
+.polaroid-images a {
+    background: white none repeat scroll 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: inline;
+    float: left;
+    margin: 0 15px 30px;
+    padding: 10px 10px 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.15s linear 0s;
+    z-index: 0;
+}
+.polaroid-images a::after {
+    color: #333;
+    content: attr(title);
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+}
+.polaroid-images a div{
+    background-color: black;
+}
+.polaroid-images img {
+    display: block;
+    width: inherit;
+    opacity:0;
+    -moz-transition: opacity 5s; /* Firefox 4 */
+    -webkit-transition: opacity 5s; /* Safari and Chrome */
+    -o-transition: opacity 5s;
+    transition: opacity 5s;
+}
+.polaroid-images a:nth-child(2n) {
+    transform: rotate(4deg);
+}
+.polaroid-images a:nth-child(3n) {
+    transform: rotate(-12deg);
+}
+.polaroid-images a:nth-child(4n) {
+    transform: rotate(14deg);
+}
+.polaroid-images a:nth-child(5n) {
+    transform: rotate(-11deg);
+}
+.polaroid-images a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transform: scale(1.2);
+    z-index: 10;
+}

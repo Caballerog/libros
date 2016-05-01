@@ -1,0 +1,29 @@
+.animacion{
+   width:60%;
+   height:20px;
+   margin:auto;
+   background:#999;
+}
+.animacion .progres{
+   position:absolute;
+   height:100%;
+   margin:auto;
+   background:url('./img/progress.png');
+   animation:  animacion_ejemplo 10s infinite ease;
+}
+@keyframes animacion_ejemplo {
+   0%{width:0%}
+   100%{width:100%}
+}
+.animacion .gloss{
+   position:absolute;
+   width:120%;
+   height:100%;
+   margin-left:-20px;
+   background:url('img/bar.png');
+   animation:  animacion_barra 10s infinite ease;
+}
+@keyframes animacion_barra {
+   0%{margin-left:-20px}
+   100%{margin-left:0px}
+}

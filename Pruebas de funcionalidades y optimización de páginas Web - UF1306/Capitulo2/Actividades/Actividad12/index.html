@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tablón</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="polaroid-images">
+            <a href="" title="Ratas"><div><img height="200" src="assets/images/foto1.jpg" alt="Ratas" title="Ratas" /></div></a>
+            <a href="" title="Twitch"><div><img height="200" src="assets/images/foto2.jpg" alt="Twitch" title="Twitch" /></div></a>
+            <a href="" title="Ludo"><div><img height="200" src="assets/images/foto3.jpg" alt="Ludo" title="Ludo" /></div></a>
+            <a href="" title="Ludo 2"><div><img height="200" src="assets/images/foto4.jpg" alt="Ludo 2" title="Ludo 2" /></div></a>
+            <a href="" title="Déjate el pelo"><div><img height="200" src="assets/images/foto5.jpg" alt="Dejate el pelo" title="Dejate el pelo" /></div></a>
+            <a href="" title="En-ratada"><div><img height="200" src="assets/images/foto6.jpg" alt="En-ratada" title="En-ratada" /></div></a>
+            <a href="" title="Pluma"><div><img height="200" src="assets/images/foto7.jpg" alt="Pluma" title="Pluma" /></div></a>
+            <a href="" title="Orange Clockwork"><div><img height="200" src="assets/images/foto8.jpg" alt="Orange Clockwork" title="Orange Clockwork" /></div></a>
+        </div>
+    </body>
+    <script>
+        window.onload= function () {
+            var images = document.getElementsByTagName("img");
+            for(var i=0, max=images.length;i<max;i++){
+                images[i].style.opacity = '1';
+            };
+        };
+    </script>
+</html>

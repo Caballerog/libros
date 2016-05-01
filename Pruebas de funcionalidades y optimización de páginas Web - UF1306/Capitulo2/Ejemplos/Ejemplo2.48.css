@@ -1,0 +1,24 @@
+.cubo .cara#superior {
+   background-color: orange;
+   transform: rotateX(90deg) translateZ(100px);
+}
+.cubo .cara#frente {
+   background-color: red;
+   transform: translateZ(100px);
+}
+.cubo .cara#atras {
+   background-color: green;
+   transform: translateZ(-100px);
+}
+.cubo .cara#derecha {
+   background-color: blue;
+   transform: rotateY(90deg) translateZ(100px);
+}
+.cubo .cara#izquierda {
+   background-color: yellow;
+   transform: rotateY(-90deg) translateZ(100px);
+}
+.cubo .cara#inferior {
+   background-color: fuchsia;
+   transform: rotateX(-90deg) translateZ(100px);
+}

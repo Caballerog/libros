@@ -1,0 +1,29 @@
+#DTI-skew1:hover {
+   -moz-transform:skew(10deg);
+   -webkit-transform:skew(10deg);
+   -o-transform:skew(10deg);
+}
+#DTI-skew2:hover {
+   -moz-transform:skew(-10deg);
+   -webkit-transform:skew(-10deg);
+   -o-transform:skew(-10deg);
+}
+#DTI-skew3:hover{
+   -moz-transform:skew(20deg,-10deg);
+   -webkit-transform:skew(20deg,-10deg);
+   -o-transform:skew(20deg,-10deg);
+}
+#DTI-skew4:hover{
+   -moz-transform:skew(-10deg,20deg);
+   -webkit-transform:skew(-10deg,20deg);-o-transform:skew(-10deg,20deg);
+}
+#DTI-skew5:hover{
+   -moz-transform:skewX(10deg);
+   -webkit-transform:skewX(10deg);
+   -o-transform:skewX(10deg);
+}
+#DTI-skew6:hover{
+   -moz-transform:skewY(10deg);
+   -webkit-transform:skewY(10deg);
+   -o-transform:skewY(10deg);
+}

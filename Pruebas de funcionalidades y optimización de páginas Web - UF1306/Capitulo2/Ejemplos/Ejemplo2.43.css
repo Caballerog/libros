@@ -1,0 +1,15 @@
+#DTI-translate1:hover{
+   -moz-transform:translate(20px,-10px);
+   -webkit-transform:translate(20px,-10px);
+   -o-transform:translate(20px,-10px);
+}
+#DTI-translate2:hover{
+   -moz-transform:translateX(100px);
+   -webkit-transform:translateX(100px);
+   -o-transform:translateX(100px);
+}
+#DTI-translate3:hover{
+   -moz-transform:translateY(20px);
+   -webkit-transform:translateY(20px);
+   -o-transform:translateY(20px);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+        <title>Actividad 10</title>
+        <style type="text/css">
+			body {
+				font-family: "Century Gothic", arial, sans-serif;
+				color: #777;
+				text-align: center;
+				margin: 5%;
+			}
+			main {
+				background: url('img/speedo.png') no-repeat;
+				width: 506px;
+				height: 320px;
+				margin: 0 auto;
+			}
+			#cuentakm {
+				width: 400px;
+				height: 100px;
+				-webkit-border-radius: 17em 17em 4em 4em;
+				-moz-border-radius: 17em 17em 4em 4em;
+				border-radius: 17em 17em 4em 4em;
+				margin-top: 2%;
+				margin-left: 0.5%;
+				padding: 45% 0 0 14%;
+			}
+			#marcador {
+				background: url('img/arrow.png') no-repeat;
+				-moz-transform-origin: bottom right;
+				-webkit-transform-origin: bottom right;
+				-o-transform-origin: bottom right;
+				-ms-transform-origin: bottom right;
+				transform-origin: bottom right;
+				-webkit-transform:rotate(-25deg);
+				-moz-transform:rotate(-25deg);
+				transform:rotate(-25deg);
+				-webkit-transition:-webkit-transform 7s;
+				-moz-transition:-moz-transform 7s;
+				transition:transform 7s;
+				width: 165px;
+				height: 18px;
+			}
+			#cuentakm:hover #marcador{
+				-webkit-transform:rotate(200deg);
+				-moz-transform:rotate(200deg);
+				transform:rotate(200deg);
+			}
+        </style>
+   	</head>
+	<body>
+		<header>
+			<h1>Actividad 10</h1>
+		</header>
+		<main>
+	    	<div id="cuentakm">
+	    		<div id="marcador"></div>
+	        </div>
+		</main>
+	</body>
+</html>

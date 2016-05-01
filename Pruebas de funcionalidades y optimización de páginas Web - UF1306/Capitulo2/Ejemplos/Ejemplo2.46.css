@@ -1,0 +1,28 @@
+.cubo, .cubo .cara {
+  width: 200px;
+  height: 200px;
+}
+.cubo .cara {
+  position: absolute;
+}
+.cubo {
+  margin: 100px auto;
+}
+.cubo .cara#superior {
+  background-color: orange;
+}
+.cubo .cara#frente {
+  background-color: red;
+}
+.cubo .cara#atras {
+  background-color: green;
+}
+.cubo .cara#derecha {
+  background-color: blue;
+}
+.cubo .cara#izquierda {
+  background-color: yellow;
+}
+.cubo .cara#inferior {
+  background-color: fuchsia;
+}

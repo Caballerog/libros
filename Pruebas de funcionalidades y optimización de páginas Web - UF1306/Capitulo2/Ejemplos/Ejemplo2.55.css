@@ -1,0 +1,13 @@
+.animacion div{
+   width:10%;
+   height:60px;
+   margin-left:0%;
+   background:#0F0;
+   animation: Ejemplo 10s infinite ease;
+}
+@keyframes Ejemplo {
+   0%{width:10%}
+   33%{width:20%}
+   66%{width:60%}
+   100%{width:10%}
+}

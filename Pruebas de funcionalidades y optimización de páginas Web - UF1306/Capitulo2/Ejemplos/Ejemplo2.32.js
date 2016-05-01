@@ -1,0 +1,3 @@
+function cerrarVentana(){
+   refWindow.close();
+}

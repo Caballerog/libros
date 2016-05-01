@@ -1,0 +1,10 @@
+#DTI-rotate1:hover {
+   -moz-transform:rotate(5deg);
+   -webkit-transform:rotate(5deg);
+   -o-transform:rotate(5deg);
+}
+#DTI-rotate2:hover {
+   -moz-transform:rotate(-5deg);
+   -webkit-transform:rotate(-5deg);
+   -o-transform:rotate(-5deg);
+}
